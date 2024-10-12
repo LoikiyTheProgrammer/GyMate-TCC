@@ -1,18 +1,21 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export function ChestBack() {
-  return (
-    <View style={styles.container}>
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>Chest</Text>
-        </TouchableOpacity>
-    
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>Back</Text>
-        </TouchableOpacity>
-    </View>
-  );
+    const navigation = useNavigation();
+
+    return (
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Chest")}>
+                <Text style={styles.text}>Peito</Text>
+            </TouchableOpacity>
+        
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Back")}>
+                <Text style={styles.text}>Costas</Text>
+            </TouchableOpacity>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({

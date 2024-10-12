@@ -1,18 +1,21 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export function ShouldersWaist() {
-  return (
-    <View style={styles.container}>
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>Shoulders</Text>
-        </TouchableOpacity>
-    
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>Waist</Text>
-        </TouchableOpacity>
-    </View>
-  );
+    const navigation = useNavigation();
+
+    return (
+        <View style={styles.container}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Shoulders")}>
+                <Text style={styles.text}>Ombro</Text>
+            </TouchableOpacity>
+        
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Waist")}>
+                <Text style={styles.text}>Cintura</Text>
+            </TouchableOpacity>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({

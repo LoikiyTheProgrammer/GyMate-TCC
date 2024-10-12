@@ -6,6 +6,13 @@ import Chat from "../screens/Chat/chat";
 import Main from "../screens/Main/main";
 import Profile from "../screens/Profile/profile";
 import AI from "../screens/AI/ai";
+import Rotine from "../screens/Rotine/rotine";
+import Arms from "../screens/Exercises/Arms%Legs/arms";
+import Legs from "../screens/Exercises/Arms%Legs/legs";
+import Chest from "../screens/Exercises/Chest%Back/chest";
+import Back from "../screens/Exercises/Chest%Back/back";
+import Shoulders from "../screens/Exercises/Shoulders%Waist/shoulders";
+import Waist from "../screens/Exercises/Shoulders%Waist/waist";
 
 const Stack = createNativeStackNavigator();
 
@@ -51,6 +58,48 @@ export default function StackRoutes() {
             <Stack.Screen
                 name="GyMate AI"
                 component={AI}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Rotine"
+                component={Rotine}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Arms"
+                component={Arms}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Legs"
+                component={Legs}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Chest"
+                component={Chest}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Back"
+                component={Back}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Shoulders"
+                component={Shoulders}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate Waist"
+                component={Waist}
                 options={{ headerShown: false}}
             />
         </Stack.Navigator>

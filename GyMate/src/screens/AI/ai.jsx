@@ -34,14 +34,12 @@ export default function AI() {
 
             <View style={styles.main}>
                 <View style={styles.welcome}>
-                    <Ionicons name="sparkles" size={25} color="#fff"/>
                     <Text style={styles.welcomeText}>O que você deseja exercitar?</Text>
-                    <Ionicons name="sparkles" size={25} color="#fff"/>
                 </View>
 
-                <View style={styles.rotine}>
-                    <ScrollView>
-                        <Text style={styles.rotineText}>{responseText}</Text>
+                <View style={styles.response}>
+                    <ScrollView style={styles.scrollview}>
+                        <Text style={styles.responseText}>{responseText}</Text>
                     </ScrollView>
                 </View>
 

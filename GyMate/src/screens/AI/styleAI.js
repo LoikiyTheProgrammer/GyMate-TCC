@@ -49,38 +49,45 @@ const styles = StyleSheet.create({
     welcome: {
         width: "90%",
         height: "10%",
-        display: "flex",
-        flexDirection: "row",
+        paddingHorizontal: "5%",
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
+        backgroundColor: "#1179e2",
     },
 
     welcomeText: {
-        fontSize: 16,
+        fontSize: 20,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
     },
 
-    rotine: {
+    response: {
         width: "90%",
-        height: "60%",
-        paddingHorizontal: "5%",
+        height: "70%",
         borderWidth: 2,
-        borderRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
         borderColor: "#1179e2",
         backgroundColor: "#fff",
     },
 
-    rotineText: {
+    scrollview: {
+        paddingHorizontal: "5%",
+    },
+
+    responseText: {
         fontSize: 16,
         fontFamily: "Lexend Regular",
         color: "#1179e2",
+        textAlign: "justify",
     },
 
     gemini: {
         width: "90%",
-        height: "20%",
+        height: "10%",
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-end",

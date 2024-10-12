@@ -1,13 +1,10 @@
 import React from "react";
-import styles from "./styleMain";
+import styles from "./styleRotine";
 import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { ArmsLegs } from "../../components/Arms&Legs";
-import { ChestBack } from "../../components/Chest&Back";
-import { ShouldersWaist } from "../../components/Shoulders&Waist";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Main() {
+export default function Rotine() {
     const navigation = useNavigation();
 
     return (
@@ -22,24 +19,16 @@ export default function Main() {
             </View>
 
             <View style={styles.main}>
-                <View style={styles.nav}>
-                    <Text style={styles.navText}>Começe seu treino agora</Text>
-                    <TouchableOpacity style={styles.buttonRotine} onPress={() => navigation.navigate("GyMate Rotine")}>
-                        <Image style={styles.buttonRotineImage} source={require("../../assets/imgs/Fundo-GyMate-90º.png")} />
-                        <Text style={styles.buttonRotineText}>Crie sua rotina</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.buttonAI} onPress={() => navigation.navigate("GyMate AI")}>
-                        <Text style={styles.buttonAIText}>Teste nossa IA</Text>
-                    </TouchableOpacity>
+                <View style={styles.welcome}>
+                    <Text style={styles.welcomeText}>Lista de rotina de treinos</Text>
                 </View>
 
-                <View style={styles.boxScrollview}>
-                    <Text style={styles.scrollviewTitle}>Treine também em casa</Text>
+                <View style={styles.rotine}>
                     <ScrollView>
-                        <ArmsLegs/>
-                        <ChestBack/>
-                        <ShouldersWaist/>
+                        <TouchableOpacity style={styles.addRotine}>
+                            <Text style={styles.addRotineText}>Criar nova rotina</Text>
+                            <MaterialCommunityIcons name="plus" size={50} color="#fff"/>
+                        </TouchableOpacity>
                     </ScrollView>
                 </View>
             </View>
@@ -50,7 +39,7 @@ export default function Main() {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Main")}>
-                    <MaterialCommunityIcons name="home" size={45} color="#fff"/>
+                    <MaterialCommunityIcons name="home-outline" size={45} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Profile")}>

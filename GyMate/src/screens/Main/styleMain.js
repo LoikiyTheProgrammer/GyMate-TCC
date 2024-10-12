@@ -41,37 +41,86 @@ const styles = StyleSheet.create({
 
     main: {
         width: "100%",
-        height: "30%",
+        height: "80%",
         alignItems: "center",
         justifyContent: "center",
     },
 
+    nav: {
+        width: "90%",
+        height: "30%",
+        borderWidth: 2,
+        borderRadius: 20,
+        borderColor: "#1179e2",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff",
+    },
+
+    navText: {
+        fontSize: 20,
+        fontFamily: "Lexend Bold",
+        color: "#1179e2",
+        textAlign: "center",
+    },
+
+    buttonRotine: {
+        width: "90%",
+        height: 60,
+        margin: 10,
+        borderWidth: 2,
+        borderRadius: 20,
+        borderColor: "#1179e2",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#1179e2",
+    },
+
+    buttonRotineText: {
+        fontSize: 25,
+        fontFamily: "Lexend Bold",
+        color: "#fff",
+        textAlign: "center",
+    },
+
+    buttonRotineImage: {
+        width: "100%",
+        height: "100%",
+        borderRadius: 18,
+        position: "absolute",
+    },
+
+    buttonAI: {
+        width: "90%",
+        height: 60,
+        margin: 10,
+        borderWidth: 2,
+        borderRadius: 20,
+        borderColor: "#1179e2",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff",
+    },
+
+    buttonAIText: {
+        fontSize: 25,
+        fontFamily: "Lexend Bold",
+        color: "#1179e2",
+        textAlign: "center",
+    },
+
     boxScrollview: {
         width: "90%",
-        height: "50%",
+        height: "60%",
         alignItems: "center",
         justifyContent: "center",
     },
 
     scrollviewTitle: {
         alignSelf: "flex-start",
-        fontSize: 20,
+        fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#fff",
-    },
-
-    divRotine: {
-        width: "90%",
-        height: "80%",
-        borderLeftWidth: 2,
-        borderRightWidth: 2,
-        borderBottomWidth: 2,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        borderColor: "#1179e2",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#fff",
     },
 
     footer: {

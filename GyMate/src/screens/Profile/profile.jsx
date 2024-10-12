@@ -44,7 +44,7 @@ export default function Profile() {
             <View style={styles.main}>
                 <View style={styles.boxProfile}>
                     <View style={styles.profile}>
-                        <MaterialCommunityIcons name="account-circle" size={350} color="#000"/>
+                        <MaterialCommunityIcons name="account-circle" size={300} color="#000"/>
                         <Text style={styles.profileText}>{user?.email}</Text>
                     </View>
 
