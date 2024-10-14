@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     geminiInput: {
         width: "80%",
         height: 60,
-        paddingLeft: "5%",
+        paddingHorizontal: "5%",
         borderWidth: 2,
         borderTopLeftRadius: 20,
         borderBottomLeftRadius: 20,

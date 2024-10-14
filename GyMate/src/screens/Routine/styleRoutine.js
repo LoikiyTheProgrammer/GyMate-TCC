@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    rotine: {
+    routine: {
         width: "90%",
         height: "80%",
         padding: "5%",
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    addRotine: {
+    addRoutine: {
         width: "100%",
         height: 60,
         borderRadius: 20,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         backgroundColor: "gray",
     },
 
-    addRotineText: {
+    addRoutineText: {
         fontSize: 20,
         fontFamily: "Lexend Bold",
         color: "#fff",

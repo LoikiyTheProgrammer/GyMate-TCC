@@ -14,12 +14,12 @@ export default function AI() {
 
     const handleSend = async () => {
         try {
-            const result = await run(question)
-            setResponseText(result)
+            const result = await run(question);
+            setResponseText(result);
         } catch (error) {
-            console.error("Error fetching response:", error)
+            console.error("Error fetching response:", error);
         }
-    }
+    };
 
     return (
         <SafeAreaView style={styles.container}>

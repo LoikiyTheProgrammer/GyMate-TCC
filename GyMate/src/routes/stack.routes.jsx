@@ -6,7 +6,7 @@ import Chat from "../screens/Chat/chat";
 import Main from "../screens/Main/main";
 import Profile from "../screens/Profile/profile";
 import AI from "../screens/AI/ai";
-import Rotine from "../screens/Rotine/rotine";
+import Routine from "../screens/Routine/routine";
 import Arms from "../screens/Exercises/Arms%Legs/arms";
 import Legs from "../screens/Exercises/Arms%Legs/legs";
 import Chest from "../screens/Exercises/Chest%Back/chest";
@@ -62,8 +62,8 @@ export default function StackRoutes() {
             />
 
             <Stack.Screen
-                name="GyMate Rotine"
-                component={Rotine}
+                name="GyMate Routine"
+                component={Routine}
                 options={{ headerShown: false}}
             />
 

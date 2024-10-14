@@ -24,9 +24,9 @@ export default function Main() {
             <View style={styles.main}>
                 <View style={styles.nav}>
                     <Text style={styles.navText}>Começe seu treino agora</Text>
-                    <TouchableOpacity style={styles.buttonRotine} onPress={() => navigation.navigate("GyMate Rotine")}>
-                        <Image style={styles.buttonRotineImage} source={require("../../assets/imgs/Fundo-GyMate-90º.png")} />
-                        <Text style={styles.buttonRotineText}>Crie sua rotina</Text>
+                    <TouchableOpacity style={styles.buttonRoutine} onPress={() => navigation.navigate("GyMate Routine")}>
+                        <Image style={styles.buttonRoutineImage} source={require("../../assets/imgs/Fundo-GyMate-90º.png")} />
+                        <Text style={styles.buttonRoutineText}>Crie sua rotina</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.buttonAI} onPress={() => navigation.navigate("GyMate AI")}>

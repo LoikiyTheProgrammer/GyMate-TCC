@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    buttonRotine: {
+    buttonRoutine: {
         width: "90%",
         height: 60,
         margin: 10,
@@ -76,14 +76,14 @@ const styles = StyleSheet.create({
         backgroundColor: "#1179e2",
     },
 
-    buttonRotineText: {
+    buttonRoutineText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
     },
 
-    buttonRotineImage: {
+    buttonRoutineImage: {
         width: "100%",
         height: "100%",
         borderRadius: 18,

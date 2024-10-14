@@ -32,9 +32,9 @@ export default function Home() {
                     <Text style={styles.navButtonSignUpText}>Registrar-se</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.navButtonSignIn} onPress={ () => navigation.navigate("GyMate Main")}>
-                    <Text style={styles.navButtonSignInText}></Text>
-                </TouchableOpacity>
+                {/* <TouchableOpacity onPress={ () => navigation.navigate("GyMate Main")}>
+                    <Text>Pular</Text>
+                </TouchableOpacity> */}
             </View>
 
             <View style={styles.footer}/>

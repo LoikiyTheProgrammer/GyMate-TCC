@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./styleRotine";
+import styles from "./styleRoutine";
 import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Rotine() {
+export default function Routine() {
     const navigation = useNavigation();
 
     return (
@@ -23,10 +23,10 @@ export default function Rotine() {
                     <Text style={styles.welcomeText}>Lista de rotina de treinos</Text>
                 </View>
 
-                <View style={styles.rotine}>
+                <View style={styles.routine}>
                     <ScrollView>
-                        <TouchableOpacity style={styles.addRotine}>
-                            <Text style={styles.addRotineText}>Criar nova rotina</Text>
+                        <TouchableOpacity style={styles.addRoutine}>
+                            <Text style={styles.addRoutineText}>Criar nova rotina</Text>
                             <MaterialCommunityIcons name="plus" size={50} color="#fff"/>
                         </TouchableOpacity>
                     </ScrollView>

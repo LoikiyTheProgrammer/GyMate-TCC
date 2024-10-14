@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "./styleSignIn";
-import { SafeAreaView, View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { FIREBASE_AUTH } from "../../../firebase/index";
+import { FIREBASE_AUTH } from "../../../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function SignIn() {
@@ -11,16 +11,22 @@ export default function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const [loading, setLoading] = useState(false);
+
     const handleSignIn = async () => {
         const auth = FIREBASE_AUTH;
+        setLoading(true);
         try {
-            await signInWithEmailAndPassword(auth, email, password)
-            console.log("User signed in successfully!")
-            navigation.navigate("GyMate Main")
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log("User signed in successfully!");
+            navigation.navigate("GyMate Main");
         } catch (error) {
-            console.error("Authentication error:", error.message)
+            console.error("Authentication error:", error.message);
+            Alert.alert("Authentication Error", error.message);
+        } finally {
+            setLoading(false);
         }
-    }
+    };
 
     return (
         <SafeAreaView style={styles.container}>

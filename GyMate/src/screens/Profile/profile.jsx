@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleProfile";
-import { SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from '@react-navigation/native';
-import { FIREBASE_AUTH } from "../../firebase/index";
+import { FIREBASE_AUTH } from "../../firebase/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 
 export default function Profile() {
@@ -13,22 +13,25 @@ export default function Profile() {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (user) => {
-            setUser(user)
-        })
+            setUser(user);
+        });
 
-        return () => unsubscribe()
-    }, [FIREBASE_AUTH])
+        return () => unsubscribe();
+    }, [FIREBASE_AUTH]);
+
+    const [loading, setLoading] = useState(false);
 
     const handleSignOut = async () => {
         const auth = FIREBASE_AUTH;
         try {
             await signOut(auth)
-            console.log("User signed out successfully!")
-            navigation.navigate("GyMate")
+            console.log("User signed out successfully!");
+            navigation.navigate("GyMate");
         } catch (error) {
-            console.error("Sign out error:", error.message)
+            console.error("Sign out error:", error.message);
+            Alert.alert("Authentication Error", error.message);
         }
-    }
+    };
 
     return (
         <SafeAreaView style={styles.container}>
