@@ -12,29 +12,29 @@ export default function Home() {
 
             <View style={styles.header}/>
 
-            <View style={styles.boxLogo}>
-                <View style={styles.logo}>
-                    <Text style={styles.logoText}>GyMate</Text>
-                    <Text style={styles.logoSubText}>escolha o modo de acesso</Text>
+            <View style={styles.logoContainer}>
+                <View style={styles.logoContent}>
+                    <Text style={styles.logoTitle}>GyMate</Text>
+                    <Text style={styles.logoText}>escolha o modo de acesso</Text>
                 </View>
             </View>
 
-            <View style={styles.welcome}>
+            <View style={styles.welcomeContainer}>
                 <Text style={styles.welcomeText}>Bora treinar?</Text>
             </View>
 
-            <View style={styles.nav}>
-                <TouchableOpacity style={styles.navButtonSignIn} onPress={ () => navigation.navigate("GyMate Sign-in")}>
-                    <Text style={styles.navButtonSignInText}>Login</Text>
+            <View style={styles.navContainer}>
+                <TouchableOpacity style={styles.buttonSignin} onPress={ () => navigation.navigate("GyMate Sign-in")}>
+                    <Text style={styles.buttonSigninText}>Login</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.navButtonSignUp} onPress={ () => navigation.navigate("GyMate Sign-up")}>
-                    <Text style={styles.navButtonSignUpText}>Registrar-se</Text>
+                <TouchableOpacity style={styles.buttonSignup} onPress={ () => navigation.navigate("GyMate Sign-up")}>
+                    <Text style={styles.buttonSignupText}>Registrar-se</Text>
                 </TouchableOpacity>
 
-                {/* <TouchableOpacity onPress={ () => navigation.navigate("GyMate Main")}>
+                <TouchableOpacity onPress={ () => navigation.navigate("GyMate Main")}>
                     <Text>Pular</Text>
-                </TouchableOpacity> */}
+                </TouchableOpacity>
             </View>
 
             <View style={styles.footer}/>

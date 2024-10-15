@@ -32,14 +32,14 @@ export default function SignIn() {
         <SafeAreaView style={styles.container}>
             <View style={styles.header}/>
 
-            <View style={styles.boxLogo}>
-                <View style={styles.logo}>
-                    <Text style={styles.logoText}>GyMate</Text>
-                    <Text style={styles.logoSubText}>coloque seus dados de acesso para iniciar sua sessão</Text>
+            <View style={styles.logoContainer}>
+                <View style={styles.logoContent}>
+                    <Text style={styles.logoTitle}>GyMate</Text>
+                    <Text style={styles.logoText}>coloque seus dados de acesso para iniciar sua sessão</Text>
                 </View>
             </View>
 
-            <View style={styles.main}>
+            <View style={styles.mainContainer}>
                 <TextInput
                     style={styles.mainInput}
                     value={email}
@@ -61,9 +61,9 @@ export default function SignIn() {
                     <Text style={styles.buttonForgotText}>Esqueci minha senha</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonSignIn} onPress={handleSignIn}>
-                    <Image style={styles.buttonSignInImage} source={require("../../../assets/imgs/Fundo-GyMate-90º.png")} />
-                    <Text style={styles.buttonSignInText}>Entrar na conta</Text>
+                <TouchableOpacity style={styles.buttonSignin} onPress={handleSignIn}>
+                    <Image style={styles.buttonSigninImage} source={require("../../../assets/imgs/Fundo-GyMate-90º.png")} />
+                    <Text style={styles.buttonSigninText}>Entrar na conta</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.buttonBack} onPress={() => navigation.navigate("GyMate")}>
@@ -71,10 +71,10 @@ export default function SignIn() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.nav}>
+            <View style={styles.navContainer}>
                 <Text style={styles.navText}>Não possui uma conta?</Text>
-                <TouchableOpacity style={styles.navButtonSignUp} onPress={() => navigation.navigate("GyMate Sign-up")}>
-                    <Text style={styles.navButtonSignUpText}>Clique aqui!</Text>
+                <TouchableOpacity style={styles.buttonSignup} onPress={() => navigation.navigate("GyMate Sign-up")}>
+                    <Text style={styles.buttonSignupText}>Clique aqui!</Text>
                 </TouchableOpacity>
             </View>
 

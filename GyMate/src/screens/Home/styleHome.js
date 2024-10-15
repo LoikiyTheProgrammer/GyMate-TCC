@@ -19,14 +19,14 @@ const styles = StyleSheet.create({
         height: "5%",
     },
 
-    boxLogo: {
+    logoContainer: {
         width: "100%",
         height: "40%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    logo: {
+    logoContent: {
         width: "90%",
         height: "100%",
         borderWidth: 2,
@@ -37,23 +37,23 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    logoText: {
+    logoTitle: {
         fontSize: 80,
         fontFamily: "Lexend Bold",
         color: "#1179e2",
         textAlign: "center",
     },
 
-    logoSubText: {
+    logoText: {
         fontSize: 20,
         fontFamily: "Lexend Regular",
         color: "#1179e2",
         textAlign: "center",
     },
 
-    welcome: {
+    welcomeContainer: {
         width: "100%",
-        height: "30%",
+        height: "35%",
         alignContent: "center",
         justifyContent: "center",
     },
@@ -65,17 +65,16 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    nav: {
+    navContainer: {
         width: "100%",
-        height: "20%",
+        height: "15%",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
     },
 
-    navButtonSignIn: {
+    buttonSignin: {
         width: "90%",
         height: 60,
-        margin: 5,
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
@@ -84,17 +83,16 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    navButtonSignInText: {
+    buttonSigninText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#1179e2",
         textAlign: "center",
     },
 
-    navButtonSignUp: {
+    buttonSignup: {
         width: "90%",
         height: 60,
-        margin: 5,
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
@@ -103,7 +101,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    navButtonSignUpText: {
+    buttonSignupText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#1179e2",

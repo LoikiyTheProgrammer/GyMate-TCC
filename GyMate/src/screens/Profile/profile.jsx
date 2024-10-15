@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleProfile";
-import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH } from "../../firebase/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 
@@ -19,8 +19,6 @@ export default function Profile() {
         return () => unsubscribe();
     }, [FIREBASE_AUTH]);
 
-    const [loading, setLoading] = useState(false);
-
     const handleSignOut = async () => {
         const auth = FIREBASE_AUTH;
         try {
@@ -35,7 +33,7 @@ export default function Profile() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require('../../assets/imgs/Fundo-GyMate.png')}/>
+            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
 
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
@@ -44,15 +42,15 @@ export default function Profile() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.main}>
-                <View style={styles.boxProfile}>
-                    <View style={styles.profile}>
+            <View style={styles.mainContainer}>
+                <View style={styles.profileContainer}>
+                    <View style={styles.profileContent}>
                         <MaterialCommunityIcons name="account-circle" size={300} color="#000"/>
                         <Text style={styles.profileText}>{user?.email}</Text>
                     </View>
 
-                    <TouchableOpacity style={styles.buttonSignOut} onPress={handleSignOut}>
-                        <Text style={styles.buttonSignOutText}>Sair da conta</Text>
+                    <TouchableOpacity style={styles.buttonSignout} onPress={handleSignOut}>
+                        <Text style={styles.buttonSignoutText}>Sair da conta</Text>
                     </TouchableOpacity>
                 </View>
             </View>

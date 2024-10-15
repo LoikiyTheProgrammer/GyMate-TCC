@@ -39,18 +39,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    main: {
+    mainContainer: {
         width: "100%",
         height: "80%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    nav: {
+    navContainer: {
         width: "90%",
         height: "30%",
         borderWidth: 2,
-        borderRadius: 20,
+        borderRadius: 10,
         borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     },
 
     navText: {
+        margin: 5,
         fontSize: 20,
         fontFamily: "Lexend Bold",
         color: "#1179e2",
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     buttonRoutine: {
         width: "90%",
         height: 60,
-        margin: 10,
+        margin: 5,
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     buttonAI: {
         width: "90%",
         height: 60,
-        margin: 10,
+        margin: 5,
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
@@ -109,18 +110,18 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    boxScrollview: {
+    scrollviewContainer: {
         width: "90%",
         height: "60%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    scrollviewTitle: {
-        alignSelf: "flex-start",
+    scrollviewText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#fff",
+        alignSelf: "flex-start",
     },
 
     footer: {

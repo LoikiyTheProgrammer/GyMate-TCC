@@ -13,35 +13,35 @@ const styles = StyleSheet.create({
         height: "5%",
     },
 
-    boxLogo: {
+    logoContainer: {
         width: "100%",
         height: "20%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    logo: {
+    logoContent: {
         width: "90%",
         height: "100%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    logoText: {
+    logoTitle: {
         fontSize: 80,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
     },
 
-    logoSubText: {
+    logoText: {
         fontSize: 20,
         fontFamily: "Lexend Regular",
         color: "#fff",
         textAlign: "center",
     },
 
-    main: {
+    mainContainer: {
         width: "100%",
         height: "50%",
         alignItems: "center",
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#1179e2",
     },
 
-    buttonSignUp: {
+    buttonSignup: {
         width: "90%",
         height: 60,
         margin: 5,
@@ -74,14 +74,14 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    buttonSignUpText: {
+    buttonSignupText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
     },
 
-    buttonSignUpImage: {
+    buttonSignupImage: {
         width: "100%",
         height: "100%",
         borderRadius: 18,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    nav: {
+    navContainer: {
         width: "100%",
         height: "20%",
         alignItems: "center",
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    navButtonSignIn: {
+    buttonSignin: {
         alignItems: "center",
         justifyContent: "center",
     },
 
-    navButtonSignInText: {
+    buttonSigninText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#fff",

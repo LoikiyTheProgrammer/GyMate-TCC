@@ -39,19 +39,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    main: {
+    mainContainer: {
         width: "100%",
         height: "80%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    welcome: {
+    welcomeContainer: {
         width: "90%",
         height: "10%",
         paddingHorizontal: "5%",
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#1179e2",
@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    response: {
+    responseContainer: {
         width: "90%",
         height: "70%",
         borderWidth: 2,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
         borderColor: "#1179e2",
         backgroundColor: "#fff",
     },
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         textAlign: "justify",
     },
 
-    gemini: {
+    questionContainer: {
         width: "90%",
         height: "10%",
         display: "flex",
@@ -94,12 +94,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    geminiInput: {
+    questionInput: {
         width: "80%",
         height: 60,
         paddingHorizontal: "5%",
         borderWidth: 2,
-        borderTopLeftRadius: 20,
+        borderTopLeftRadius: 10,
         borderBottomLeftRadius: 20,
         borderColor: "#1179e2",
         fontSize: 20,
@@ -108,10 +108,10 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    geminiButton: {
+    questionButton: {
         width: "20%",
         height: 60,
-        borderTopRightRadius: 20,
+        borderTopRightRadius: 10,
         borderBottomRightRadius: 20,
         alignItems: "center",
         justifyContent: "center",

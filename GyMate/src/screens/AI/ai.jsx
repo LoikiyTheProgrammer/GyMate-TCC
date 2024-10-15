@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./styleAI";
 import { SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { run } from "../../constants/gemini";
 import { useNavigation } from "@react-navigation/native";
 
@@ -32,28 +31,28 @@ export default function AI() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.main}>
-                <View style={styles.welcome}>
+            <View style={styles.mainContainer}>
+                <View style={styles.welcomeContainer}>
                     <Text style={styles.welcomeText}>O que você deseja exercitar?</Text>
                 </View>
 
-                <View style={styles.response}>
+                <View style={styles.responseContainer}>
                     <ScrollView style={styles.scrollview}>
                         <Text style={styles.responseText}>{responseText}</Text>
                     </ScrollView>
                 </View>
 
-                <View style={styles.gemini}>
+                <View style={styles.questionContainer}>
                     <TextInput
-                        style={styles.geminiInput}
+                        style={styles.questionInput}
                         value={question}
                         onChangeText={setQuestion}
                         placeholder="Digite aqui"
                         placeholderTextColor={"#1179e2"}
                     />
 
-                    <TouchableOpacity style={styles.geminiButton} onPress={handleSend}>
-                        <Ionicons name="sparkles" size={45} color="#fff"/>
+                    <TouchableOpacity style={styles.questionButton} onPress={handleSend}>
+                        <MaterialCommunityIcons name="send" size={45} color="#fff"/>
                     </TouchableOpacity>
                 </View>
             </View>

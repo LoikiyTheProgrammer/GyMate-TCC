@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     },
 
     BackgroundImage: {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
+        width: "100%",
+        height: "100%",
+        position: "absolute",
     },
 
     header: {
@@ -39,19 +39,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    main: {
+    mainContainer: {
         width: "100%",
         height: "80%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    welcome: {
+    welcomeContainer: {
         width: "90%",
         height: "10%",
         paddingHorizontal: "5%",
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#1179e2",
@@ -64,18 +64,18 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    routine: {
+    routineContainer: {
         width: "90%",
         height: "80%",
         padding: "5%",
         borderWidth: 2,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
         borderColor: "#1179e2",
         backgroundColor: "#fff",
     },
 
-    addRoutine: {
+    buttonCreate: {
         width: "100%",
         height: 60,
         borderRadius: 20,
@@ -84,12 +84,141 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "gray",
+        backgroundColor: "#b9b9b9",
     },
 
-    addRoutineText: {
-        fontSize: 20,
+    buttonCreateText: {
+        fontSize: 15,
         fontFamily: "Lexend Bold",
+        color: "#fff",
+        textAlign: "center",
+    },
+
+    modalContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+    },
+
+    modalContent: {
+        width: "85%",
+        padding: "5%",
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#fff",
+    },
+
+    modalText: {
+        width: "100%",
+        fontSize: 25,
+        fontFamily: "Lexend Bold",
+        color: "#fff",
+        textAlign: "center",
+        backgroundColor: "#1179e2"
+    },
+
+    modalInput: {
+        width: "100%",
+        height: 40,
+        marginVertical: 5,
+        paddingHorizontal: "5%",
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#1179e2",
+        fontSize: 20,
+        fontFamily: "Lexend Regular",
+        color: "#1179e2",
+        backgroundColor: "#fff",
+    },
+
+    listContainer: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+    },
+
+    listInput: {
+        width: "55%",
+        marginVertical: 5,
+        paddingHorizontal: "5%",
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#1179e2",
+        fontSize: 15,
+        fontFamily: "Lexend Regular",
+        color: "#1179e2",
+        backgroundColor: "#fff",
+    },
+
+    listNumberInput: {
+        width: "20%",
+        marginVertical: 5,
+        paddingHorizontal: "5%",
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#1179e2",
+        fontSize: 15,
+        fontFamily: "Lexend Regular",
+        color: "#1179e2",
+        textAlign: "center",
+        backgroundColor: "#fff",
+    },
+
+    buttonExercise: {
+        width: "100%",
+        height: 40,
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#b9b9b9",
+    },
+    
+    modalButtonContainer: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+    },
+
+    buttonCancel: {
+        width: "45%",
+        height: 40,
+        marginVertical: 5,
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#000",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "red",
+    },
+
+    buttonCancelText: {
+        fontSize: 20,
+        fontFamily: "Lexend Regular",
+        color: "#fff",
+        textAlign: "center",
+    },
+
+    buttonAdd: {
+        width: "45%",
+        height: 40,
+        marginVertical: 5,
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#000",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "green",
+    },
+
+    buttonAddText: {
+        fontSize: 20,
+        fontFamily: "Lexend Regular",
         color: "#fff",
         textAlign: "center",
     },

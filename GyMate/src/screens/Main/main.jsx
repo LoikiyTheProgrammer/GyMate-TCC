@@ -21,8 +21,8 @@ export default function Main() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.main}>
-                <View style={styles.nav}>
+            <View style={styles.mainContainer}>
+                <View style={styles.navContainer}>
                     <Text style={styles.navText}>Começe seu treino agora</Text>
                     <TouchableOpacity style={styles.buttonRoutine} onPress={() => navigation.navigate("GyMate Routine")}>
                         <Image style={styles.buttonRoutineImage} source={require("../../assets/imgs/Fundo-GyMate-90º.png")} />
@@ -34,8 +34,8 @@ export default function Main() {
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.boxScrollview}>
-                    <Text style={styles.scrollviewTitle}>Treine também em casa</Text>
+                <View style={styles.scrollviewContainer}>
+                    <Text style={styles.scrollviewText}>Treine também em casa</Text>
                     <ScrollView>
                         <ArmsLegs/>
                         <ChestBack/>

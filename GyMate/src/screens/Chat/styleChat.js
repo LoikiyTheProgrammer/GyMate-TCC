@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    main: {
+    mainContainer: {
         width: "100%",
         height: "80%",
         alignItems: "center",

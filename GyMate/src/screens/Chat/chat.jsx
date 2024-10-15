@@ -18,7 +18,7 @@ export default function Chat() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.main}>
+            <View style={styles.mainContainer}>
             </View>
 
             <View style={styles.footer}>
