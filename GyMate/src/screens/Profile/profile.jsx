@@ -3,21 +3,34 @@ import styles from "./styleProfile";
 import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
-import { FIREBASE_AUTH } from "../../firebase/firebase";
+import { FIREBASE_AUTH, FIREBASE_DB } from "../../firebase/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Profile() {
     const navigation = useNavigation();
 
+    const [fullName, setFullName] = useState("");
     const [user, setUser] = useState(null);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (user) => {
+        const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, async (user) => {
             setUser(user);
+
+            if (user) {
+                const userDocRef = doc(FIREBASE_DB, "Users", user.uid);
+                const userDoc = await getDoc(userDocRef);
+
+                if (userDoc.exists()) {
+                    setFullName(userDoc.data().FullName);
+                } else {
+                    console.log("User not found on Firestore!");
+                }
+            }
         });
 
         return () => unsubscribe();
-    }, [FIREBASE_AUTH]);
+    }, []);
 
     const handleSignOut = async () => {
         const auth = FIREBASE_AUTH;
@@ -46,6 +59,9 @@ export default function Profile() {
                 <View style={styles.profileContainer}>
                     <View style={styles.profileContent}>
                         <MaterialCommunityIcons name="account-circle" size={300} color="#000"/>
+                        <Text style={styles.profileTitle}>Nome:</Text>
+                        <Text style={styles.profileText}>{fullName}</Text>
+                        <Text style={styles.profileTitle}>E-mail:</Text>
                         <Text style={styles.profileText}>{user?.email}</Text>
                     </View>
 

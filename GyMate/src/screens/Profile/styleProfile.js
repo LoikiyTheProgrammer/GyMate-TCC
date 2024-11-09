@@ -62,15 +62,23 @@ const styles = StyleSheet.create({
 
     profileContent: {
         width: "100%",
+        paddingHorizontal: "5%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    profileText: {
+    profileTitle: {
         fontSize: 20,
         fontFamily: "Lexend Bold",
         color: "#000",
-        textAlign: "center",
+        alignSelf: "flex-start",
+    },
+
+    profileText: {
+        fontSize: 15,
+        fontFamily: "Lexend Regular",
+        color: "#000",
+        alignSelf: "flex-start",
     },
 
     buttonSignout: {

@@ -8,6 +8,25 @@ export default function Routine() {
     const navigation = useNavigation();
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [routines, setRoutines] = useState([]);
+    const [routineName, setRoutineName] = useState('');
+    const [exercises, setExercises] = useState([]);
+
+    const handleAddExercise = () => {
+        setExercises([...exercises, { name: '', reps: '', weight: '' }]);
+    };
+
+    const handleDeleteExercise = (index) => {
+        setExercises(exercises.filter((_, i) => i !== index));
+    };
+
+    const handleAddRoutine = () => {
+        const newRoutine = { name: routineName, exercises };
+        setRoutines([...routines, newRoutine]);
+        setModalVisible(false);
+        setRoutineName('');
+        setExercises([]);
+    };
 
     return (
         <SafeAreaView style={styles.container}>
@@ -26,11 +45,22 @@ export default function Routine() {
                 </View>
 
                 <View style={styles.routineContainer}>
-                    <ScrollView>
+                    <ScrollView style={styles.scrollView}>
                         <TouchableOpacity style={styles.buttonCreate} onPress={() => setModalVisible(true)}>
                             <Text style={styles.buttonCreateText}>Criar nova rotina</Text>
                             <MaterialCommunityIcons name="plus" size={50} color="#fff"/>
                         </TouchableOpacity>
+
+                        {routines.map((routine, index) => (
+                            <View style={styles.routine} key={index}>
+                                <Text style={styles.routineTitle}>{routine.name}</Text>
+                                {routine.exercises.map((exercise, i) => (
+                                    <View key={i} style={styles.exercise}>
+                                        <Text style={styles.routineText}>{exercise.name} - {exercise.reps} reps - {exercise.weight} kg</Text>
+                                    </View>
+                                ))}
+                            </View>
+                        ))}
                     </ScrollView>
                 </View>
 
@@ -42,31 +72,54 @@ export default function Routine() {
                                 style={styles.modalInput}
                                 placeholder="Nome da rotina"
                                 placeholderTextColor={"#1179e2"}
+                                value={routineName}
+                                onChangeText={setRoutineName}
                             />
 
-                            <View style={styles.listContainer}>
-                                <TextInput
-                                    style={styles.listInput}
-                                    placeholder="Exercício"
-                                    placeholderTextColor={"#1179e2"}
-                                />
+                            {exercises.map((exercise, index) => (
+                                <View key={index} style={styles.listContainer}>
+                                    <TextInput
+                                        style={styles.listInput}
+                                        placeholder="Exercício"
+                                        placeholderTextColor={"#1179e2"}
+                                        value={exercise.name}
+                                        onChangeText={(text) => {
+                                            const updatedExercises = [...exercises];
+                                            updatedExercises[index].name = text;
+                                            setExercises(updatedExercises);
+                                        }}
+                                    />
+                                    <TextInput
+                                        style={styles.listNumberInput}
+                                        placeholder="Rp"
+                                        placeholderTextColor={"#1179e2"}
+                                        keyboardType="numeric"
+                                        value={exercise.reps}
+                                        onChangeText={(text) => {
+                                            const updatedExercises = [...exercises];
+                                            updatedExercises[index].reps = text;
+                                            setExercises(updatedExercises);
+                                        }}
+                                    />
+                                    <TextInput
+                                        style={styles.listNumberInput}
+                                        placeholder="Kg"
+                                        placeholderTextColor={"#1179e2"}
+                                        keyboardType="numeric"
+                                        value={exercise.weight}
+                                        onChangeText={(text) => {
+                                            const updatedExercises = [...exercises];
+                                            updatedExercises[index].weight = text;
+                                            setExercises(updatedExercises);
+                                        }}
+                                    />
+                                    <TouchableOpacity style={styles.buttonDelete} onPress={() => handleDeleteExercise(index)}>
+                                        <MaterialCommunityIcons name="trash-can-outline" size={30} color="red"/>
+                                    </TouchableOpacity>
+                                </View>
+                            ))}
 
-                                <TextInput
-                                    style={styles.listNumberInput}
-                                    placeholder="Rp"
-                                    placeholderTextColor={"#1179e2"}
-                                    keyboardType="numeric"
-                                />
-
-                                <TextInput
-                                    style={styles.listNumberInput}
-                                    placeholder="Kg"
-                                    placeholderTextColor={"#1179e2"}
-                                    keyboardType="numeric"
-                                />
-                            </View>
-                            
-                            <TouchableOpacity style={styles.buttonExercise}>
+                            <TouchableOpacity style={styles.buttonExercise} onPress={handleAddExercise}>
                                 <MaterialCommunityIcons name="plus" size={25} color="#fff"/>
                             </TouchableOpacity>
 
@@ -75,7 +128,7 @@ export default function Routine() {
                                     <Text style={styles.buttonCancelText}>Cancelar</Text>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.buttonAdd} onPress={() => setModalVisible(false)}>
+                                <TouchableOpacity style={styles.buttonAdd} onPress={handleAddRoutine}>
                                     <Text style={styles.buttonAddText}>Adicionar</Text>
                                 </TouchableOpacity>
                             </View>

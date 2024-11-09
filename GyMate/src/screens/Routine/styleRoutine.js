@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     routineContainer: {
         width: "90%",
         height: "80%",
-        padding: "5%",
         borderWidth: 2,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
@@ -75,10 +74,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
+    scrollView: {
+        paddingHorizontal: "5%",
+    },
+
     buttonCreate: {
         width: "100%",
         height: 60,
         borderRadius: 20,
+        marginVertical: "2%",
         paddingHorizontal: "5%",
         display: "flex",
         flexDirection: "row",
@@ -92,6 +96,28 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
+    },
+
+    routine: {
+        width: "100%",
+        borderRadius: 10,
+        marginVertical: "2%",
+        padding: "2%",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#b9b9b9",
+    },
+
+    routineTitle: {
+        fontSize: 20,
+        fontFamily: "Lexend Bold",
+        color: "#fff",
+    },
+
+    routineText: {
+        fontSize: 15,
+        fontFamily: "Lexend Regular",
+        color: "#fff",
     },
 
     modalContainer: {
@@ -142,7 +168,7 @@ const styles = StyleSheet.create({
     },
 
     listInput: {
-        width: "55%",
+        width: "45%",
         marginVertical: 5,
         paddingHorizontal: "5%",
         borderWidth: 2,
@@ -166,6 +192,11 @@ const styles = StyleSheet.create({
         color: "#1179e2",
         textAlign: "center",
         backgroundColor: "#fff",
+    },
+
+    buttonDelete: {
+        alignItems: "center",
+        justifyContent: "center",
     },
 
     buttonExercise: {
