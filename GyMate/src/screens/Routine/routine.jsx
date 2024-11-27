@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styleRoutine";
-import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Modal, Image, TextInput } from "react-native";
+import { SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Modal, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 
@@ -18,6 +18,10 @@ export default function Routine() {
 
     const handleDeleteExercise = (index) => {
         setExercises(exercises.filter((_, i) => i !== index));
+    };
+
+    const handleDeleteRoutine = (index) => {
+        setRoutines(routines.filter((_, i) => i !== index));
     };
 
     const handleAddRoutine = () => {
@@ -59,6 +63,9 @@ export default function Routine() {
                                         <Text style={styles.routineText}>{exercise.name} - {exercise.reps} reps - {exercise.weight} kg</Text>
                                     </View>
                                 ))}
+                                <TouchableOpacity style={styles.buttonDeleteroutine} onPress={() => handleDeleteRoutine(index)}>
+                                        <MaterialCommunityIcons name="trash-can-outline" size={30} color="#fff"/>
+                                </TouchableOpacity>
                             </View>
                         ))}
                     </ScrollView>
@@ -72,6 +79,8 @@ export default function Routine() {
                                 style={styles.modalInput}
                                 placeholder="Nome da rotina"
                                 placeholderTextColor={"#1179e2"}
+                                maxLength={20}
+                                numberOfLines={1}
                                 value={routineName}
                                 onChangeText={setRoutineName}
                             />
@@ -82,6 +91,8 @@ export default function Routine() {
                                         style={styles.listInput}
                                         placeholder="Exercício"
                                         placeholderTextColor={"#1179e2"}
+                                        maxLength={20}
+                                        numberOfLines={1}
                                         value={exercise.name}
                                         onChangeText={(text) => {
                                             const updatedExercises = [...exercises];
@@ -94,6 +105,8 @@ export default function Routine() {
                                         placeholder="Rp"
                                         placeholderTextColor={"#1179e2"}
                                         keyboardType="numeric"
+                                        maxLength={3}
+                                        numberOfLines={1}
                                         value={exercise.reps}
                                         onChangeText={(text) => {
                                             const updatedExercises = [...exercises];
@@ -106,6 +119,8 @@ export default function Routine() {
                                         placeholder="Kg"
                                         placeholderTextColor={"#1179e2"}
                                         keyboardType="numeric"
+                                        maxLength={3}
+                                        numberOfLines={1}
                                         value={exercise.weight}
                                         onChangeText={(text) => {
                                             const updatedExercises = [...exercises];

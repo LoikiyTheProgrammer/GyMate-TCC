@@ -36,7 +36,7 @@ export default function Main() {
 
                 <View style={styles.scrollviewContainer}>
                     <Text style={styles.scrollviewText}>Treine também em casa</Text>
-                    <ScrollView>
+                    <ScrollView style={styles.scrollview}>
                         <ArmsLegs/>
                         <ChestBack/>
                         <ShouldersWaist/>

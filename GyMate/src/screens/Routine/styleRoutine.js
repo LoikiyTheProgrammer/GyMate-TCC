@@ -103,21 +103,28 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginVertical: "2%",
         padding: "2%",
-        alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#b9b9b9",
     },
 
     routineTitle: {
+        alignSelf: "center",
         fontSize: 20,
         fontFamily: "Lexend Bold",
         color: "#fff",
     },
 
     routineText: {
+        margin: 1,
         fontSize: 15,
         fontFamily: "Lexend Regular",
         color: "#fff",
+    },
+
+    buttonDeleteroutine: {
+        alignSelf: "flex-end",
+        alignItems: "center",
+        justifyContent: "center",
     },
 
     modalContainer: {
@@ -147,7 +154,7 @@ const styles = StyleSheet.create({
 
     modalInput: {
         width: "100%",
-        height: 40,
+        height: 50,
         marginVertical: 5,
         paddingHorizontal: "5%",
         borderWidth: 2,

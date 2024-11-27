@@ -124,6 +124,10 @@ const styles = StyleSheet.create({
         alignSelf: "flex-start",
     },
 
+    scrollview: {
+        width: "100%",
+    },
+
     footer: {
         width: "100%",
         height: "5%",

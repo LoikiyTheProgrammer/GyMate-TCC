@@ -49,6 +49,7 @@ export default function AI() {
                         onChangeText={setQuestion}
                         placeholder="Digite aqui"
                         placeholderTextColor={"#1179e2"}
+                        maxLength={100}
                     />
 
                     <TouchableOpacity style={styles.questionButton} onPress={handleSend}>

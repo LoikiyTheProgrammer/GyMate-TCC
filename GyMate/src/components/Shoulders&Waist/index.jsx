@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 export function ShouldersWaist() {
@@ -8,11 +8,13 @@ export function ShouldersWaist() {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Shoulders")}>
-                <Text style={styles.text}>Ombro</Text>
+                <Image style={styles.buttonImage} source={require("../../assets/imgs/Treino-Ombros.png")}/>
+                <Text style={styles.text}>Ombros</Text>
             </TouchableOpacity>
         
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Waist")}>
-                <Text style={styles.text}>Cintura</Text>
+                <Image style={styles.buttonImage} source={require("../../assets/imgs/Treino-Abdômen.png")}/>
+                <Text style={styles.text}>Abdômen</Text>
             </TouchableOpacity>
         </View>
     );
@@ -34,14 +36,22 @@ const styles = StyleSheet.create({
         height: "100%",
         borderRadius: 20,
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-end",
         backgroundColor: "#fff",
     },
-  
+
+    buttonImage: {
+        width: "100%",
+        height: "100%",
+        borderRadius: 20,
+        position: "absolute",
+    },
+
     text: {
+        marginBottom: 5,
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#000",
+        color: "#fff",
         textAlign: "center",
     },
 });
