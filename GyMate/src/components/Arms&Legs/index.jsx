@@ -9,12 +9,12 @@ export function ArmsLegs() {
         <View style={styles.container}>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Arms")}>
                 <Image style={styles.buttonImage} source={require("../../assets/imgs/Treino-Braços.png")}/>
-                <Text style={styles.text}>Braços</Text>
+                <Text style={styles.text}>Braço</Text>
             </TouchableOpacity>
         
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Legs")}>
             <Image style={styles.buttonImage} source={require("../../assets/imgs/Treino-Pernas.png")}/>
-                <Text style={styles.text}>Pernas</Text>
+                <Text style={styles.text}>Perna</Text>
             </TouchableOpacity>
         </View>
     );

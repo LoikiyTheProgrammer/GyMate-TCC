@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styleMain";
 import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { ArmsLegs } from "../../components/Arms&Legs";
 import { ChestBack } from "../../components/Chest&Back";
 import { ShouldersWaist } from "../../components/Shoulders&Waist";
@@ -46,15 +47,15 @@ export default function Main() {
 
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Chat")}>
-                    <MaterialCommunityIcons name="chat-outline" size={45} color="#fff"/>
+                    <Ionicons name="chatbubble-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Main")}>
-                    <MaterialCommunityIcons name="home" size={45} color="#fff"/>
+                    <Ionicons name="home" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Profile")}>
-                    <MaterialCommunityIcons name="account-outline" size={45} color="#fff"/>
+                    <Ionicons name="person-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

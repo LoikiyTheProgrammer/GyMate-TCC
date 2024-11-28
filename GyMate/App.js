@@ -49,6 +49,7 @@ export default function App() {
                 translucent
                 barStyle="dark-content"
                 backgroundColor="transparent"
+                hidden
             />
             <StackRoutes/>
         </NavigationContainer>

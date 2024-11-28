@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styleChat";
 import { SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Chat() {
@@ -23,15 +24,15 @@ export default function Chat() {
 
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Chat")}>
-                    <MaterialCommunityIcons name="chat" size={45} color="#fff"/>
+                    <Ionicons name="chatbubble" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Main")}>
-                    <MaterialCommunityIcons name="home-outline" size={45} color="#fff"/>
+                    <Ionicons name="home-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Profile")}>
-                    <MaterialCommunityIcons name="account-outline" size={45} color="#fff"/>
+                    <Ionicons name="person-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

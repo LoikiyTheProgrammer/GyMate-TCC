@@ -9,7 +9,7 @@ export function ShouldersWaist() {
         <View style={styles.container}>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Shoulders")}>
                 <Image style={styles.buttonImage} source={require("../../assets/imgs/Treino-Ombros.png")}/>
-                <Text style={styles.text}>Ombros</Text>
+                <Text style={styles.text}>Ombro</Text>
             </TouchableOpacity>
         
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("GyMate Waist")}>

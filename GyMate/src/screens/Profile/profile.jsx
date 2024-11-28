@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./styleProfile";
 import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH, FIREBASE_DB } from "../../firebase/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
@@ -73,15 +74,15 @@ export default function Profile() {
 
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Chat")}>
-                    <MaterialCommunityIcons name="chat-outline" size={45} color="#fff"/>
+                    <Ionicons name="chatbubble-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Main")}>
-                    <MaterialCommunityIcons name="home-outline" size={45} color="#fff"/>
+                    <Ionicons name="home-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Profile")}>
-                    <MaterialCommunityIcons name="account" size={45} color="#fff"/>
+                    <Ionicons name="person" size={35} color="#fff"/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

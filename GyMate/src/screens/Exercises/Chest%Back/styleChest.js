@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
     cover: {
         width: "90%",
-        height: "40%",
+        height: "39%",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -65,6 +65,11 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
+    },
+
+    space: {
+        width: "90%",
+        height: "1%",
     },
 
     scrollviewContainer: {
@@ -95,7 +100,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "85%",
         borderRadius: 20,
-        backgroundColor: "red",
+        backgroundColor: "gray",
     },
 
     buttonExerciseText: {
@@ -114,8 +119,8 @@ const styles = StyleSheet.create({
     },
 
     buttonClose: {
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         margin: 5,
         borderColor: "#000",
         alignItems: "center",
@@ -125,7 +130,8 @@ const styles = StyleSheet.create({
     modalCover: {
         width: "100%",
         height: "40%",
-        borderRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
         backgroundColor: "gray",
     },
 

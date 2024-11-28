@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styleWaist";
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, Modal, Image } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Waist() {
@@ -25,9 +26,11 @@ export default function Waist() {
 
             <View style={styles.mainContainer}>
                 <View style={styles.cover}>
-                    <Image style={styles.coverImage} source={require("../../../assets/imgs/Treino-Abdômen2.png")}/>
+                    <Image style={styles.coverImage} source={require("../../../assets/imgs/Treino-Abdômen.png")}/>
                     <Text style={styles.coverTitle}>Treino de Abdômen</Text>
                 </View>
+
+                <View style={styles.space}/>
 
                 <View style={styles.scrollviewContainer}>
                     <ScrollView style={styles.scrollview}>
@@ -188,15 +191,15 @@ export default function Waist() {
 
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Chat")}>
-                    <MaterialCommunityIcons name="chat-outline" size={45} color="#fff"/>
+                    <Ionicons name="chatbubble-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Main")}>
-                    <MaterialCommunityIcons name="home-outline" size={45} color="#fff"/>
+                    <Ionicons name="home-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Profile")}>
-                    <MaterialCommunityIcons name="account-outline" size={45} color="#fff"/>
+                    <Ionicons name="person-outline" size={35} color="#fff"/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
