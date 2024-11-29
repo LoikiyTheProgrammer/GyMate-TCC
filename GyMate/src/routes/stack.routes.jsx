@@ -16,9 +16,9 @@ import Waist from "../screens/Exercises/Shoulders%Waist/waist";
 
 const Stack = createNativeStackNavigator();
 
-export default function StackRoutes() {
+export default function StackRoutes({ initialRouteName }) {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName={initialRouteName}>
             <Stack.Screen
                 name="GyMate"
                 component={Home}

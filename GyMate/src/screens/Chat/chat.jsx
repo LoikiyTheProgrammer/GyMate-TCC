@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styleChat";
 import { SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useNavigation } from "@react-navigation/native";
 
 export default function Chat() {
     const navigation = useNavigation();

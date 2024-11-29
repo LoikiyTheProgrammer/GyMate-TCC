@@ -19,8 +19,13 @@ export default function SignUp() {
     const handleSignUp = async () => {
         const auth = FIREBASE_AUTH;
 
-        if (password !== confirmPassword) {
-            console.error("As senhas não são iguais!");
+        try {
+            if (password !== confirmPassword) {
+              throw new Error("As senhas não são iguais!");
+            }
+        } catch (error) {
+            console.error("Verification error:", error.message);
+            Alert.alert("Erro: As senhas devem ser as mesmas!");
             return;
         }
 
@@ -44,7 +49,7 @@ export default function SignUp() {
             navigation.navigate("GyMate Main");
         } catch (error) {
             console.error("Authentication error:", error.message);
-            Alert.alert("Authentication Error", error.message);
+            Alert.alert("Erro: Usuário, e-mail ou senha inválidos!");
         }
     };
 
@@ -74,6 +79,7 @@ export default function SignUp() {
                     placeholder="Digite seu e-mail"
                     placeholderTextColor={"#fff"}
                     keyboardType="email-address"
+                    autoCapitalize="none"
                 />
                 <TextInput
                     style={styles.mainInput}
@@ -82,6 +88,7 @@ export default function SignUp() {
                     placeholder="Digite sua senha"
                     placeholderTextColor={"#fff"}
                     secureTextEntry={true}
+                    autoCapitalize="none"
                 />
                 <TextInput
                     style={styles.mainInput}
@@ -90,6 +97,7 @@ export default function SignUp() {
                     placeholder="Confirme sua senha"
                     placeholderTextColor={"#fff"}
                     secureTextEntry={true}
+                    autoCapitalize="none"
                 />
 
                 <TouchableOpacity style={styles.buttonSignup} onPress={handleSignUp}>

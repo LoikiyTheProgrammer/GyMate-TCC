@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { StatusBar } from "react-native";
+import { StatusBar, ActivityIndicator, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import StackRoutes from "./src/routes/stack.routes";
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import { FIREBASE_AUTH } from "./src/firebase/firebase";
+import { onAuthStateChanged } from "firebase/auth";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,11 +25,18 @@ const loadFonts = async () => {
 
 export default function App() {
     const [fontsLoaded, setFontsLoaded] = useState(false);
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const prepare = async () => {
             try {
                 await loadFonts();
+                const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, (currentUser) => {
+                    setUser(currentUser);
+                    setLoading(false);
+                });
+                return unsubscribe;
             } catch (e) {
                 console.warn(e);
             } finally {
@@ -35,12 +44,15 @@ export default function App() {
                 SplashScreen.hideAsync();
             }
         };
-
         prepare();
     }, []);
 
-    if (!fontsLoaded) {
-        return null;
+    if (!fontsLoaded || loading) {
+        return (
+            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+                <ActivityIndicator size="large" color="#1179e2" />
+            </View>
+        );
     }
 
     return (
@@ -51,7 +63,7 @@ export default function App() {
                 backgroundColor="transparent"
                 hidden
             />
-            <StackRoutes/>
+            <StackRoutes initialRouteName={user ? "GyMate Main" : "GyMate"} />
         </NavigationContainer>
     );
 }

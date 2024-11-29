@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleProfile";
 import { Alert, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH, FIREBASE_DB } from "../../firebase/firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Profile() {
     const navigation = useNavigation();
@@ -17,31 +17,38 @@ export default function Profile() {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(FIREBASE_AUTH, async (user) => {
             setUser(user);
-
+    
             if (user) {
                 const userDocRef = doc(FIREBASE_DB, "Users", user.uid);
-                const userDoc = await getDoc(userDocRef);
-
-                if (userDoc.exists()) {
-                    setFullName(userDoc.data().FullName);
-                } else {
-                    console.log("User not found on Firestore!");
+    
+                try {
+                    const userDoc = await getDoc(userDocRef);
+    
+                    if (userDoc.exists()) {
+                        setFullName(userDoc.data().FullName);
+                    } else {
+                        console.error("User not found on Firestore!");
+                        Alert.alert("Erro: Usuário não encontrado!");
+                    }
+                } catch (error) {
+                    console.error("Fetch error:", error.message);
+                    Alert.alert("Erro: Usuário não encontrado!");
                 }
             }
         });
-
+    
         return () => unsubscribe();
-    }, []);
+    }, []);    
 
     const handleSignOut = async () => {
         const auth = FIREBASE_AUTH;
         try {
-            await signOut(auth)
+            await signOut(auth);
             console.log("User signed out successfully!");
             navigation.navigate("GyMate");
         } catch (error) {
-            console.error("Sign out error:", error.message);
-            Alert.alert("Authentication Error", error.message);
+            console.error("Sign out error:", error);
+            Alert.alert("Erro: Não foi possível deslogar");
         }
     };
 

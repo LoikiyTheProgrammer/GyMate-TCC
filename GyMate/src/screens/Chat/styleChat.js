@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     },
 
     BackgroundImage: {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
+        width: "100%",
+        height: "100%",
+        position: "absolute",
     },
 
     header: {

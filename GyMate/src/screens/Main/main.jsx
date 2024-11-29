@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./styleMain";
 import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Image } from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
 import { ArmsLegs } from "../../components/Arms&Legs";
 import { ChestBack } from "../../components/Chest&Back";
 import { ShouldersWaist } from "../../components/Shoulders&Waist";
-import { useNavigation } from "@react-navigation/native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Main() {
     const navigation = useNavigation();
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require('../../assets/imgs/Fundo-GyMate.png')}/>
+            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
 
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>

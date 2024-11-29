@@ -22,7 +22,7 @@ export default function SignIn() {
             navigation.navigate("GyMate Main");
         } catch (error) {
             console.error("Authentication error:", error.message);
-            Alert.alert("Authentication Error", error.message);
+            Alert.alert("Erro: Usuário ou senha inválidos!");
         } finally {
             setLoading(false);
         }
@@ -47,6 +47,7 @@ export default function SignIn() {
                     placeholder="Digite seu e-mail"
                     placeholderTextColor={"#1179e2"}
                     keyboardType="email-address"
+                    autoCapitalize="none"
                 />
                 <TextInput
                     style={styles.mainInput}
@@ -55,6 +56,7 @@ export default function SignIn() {
                     placeholder="Digite sua senha"
                     placeholderTextColor={"#1179e2"}
                     secureTextEntry={true}
+                    autoCapitalize="none"
                 />
 
                 <TouchableOpacity style={styles.buttonForgot}>

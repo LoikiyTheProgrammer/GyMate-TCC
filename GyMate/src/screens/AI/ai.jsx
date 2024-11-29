@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./styleAI";
-import { SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { Alert, SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { run } from "../../constants/gemini";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { run } from "../../constants/gemini";
-import { useNavigation } from "@react-navigation/native";
 
 export default function AI() {
     const navigation = useNavigation();
@@ -17,13 +17,14 @@ export default function AI() {
             const result = await run(question);
             setResponseText(result);
         } catch (error) {
-            console.error("Error fetching response:", error);
+            console.error("Fetch error:", error.message);
+            Alert.alert("Erro: Mensagem não foi enviada!");
         }
     };
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require('../../assets/imgs/Fundo-GyMate.png')}/>
+            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
 
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
