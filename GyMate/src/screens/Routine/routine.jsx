@@ -200,7 +200,7 @@ export default function Routine() {
             </View>
 
             <View style={styles.footer}>
-                <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate Chat")}>
+                <TouchableOpacity style={styles.footerButton} onPress={() => navigation.navigate("GyMate ChatList")}>
                     <Ionicons name="chatbubble-outline" size={35} color="#fff" />
                 </TouchableOpacity>
 
