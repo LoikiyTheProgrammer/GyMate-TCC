@@ -2,7 +2,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/Home/home";
 import SignIn from "../screens/Auth/SignIn/signIn";
 import SignUp from "../screens/Auth/SignUp/signUp";
-import Chat from "../screens/Chat/chat";
+import ChatList from "../screens/Chat/chatList";
+import ChatMessage from "../screens/Chat/chatMessage";
 import Main from "../screens/Main/main";
 import Profile from "../screens/Profile/profile";
 import AI from "../screens/AI/ai";
@@ -38,8 +39,14 @@ export default function StackRoutes({ initialRouteName }) {
             />
 
             <Stack.Screen
-                name="GyMate Chat"
-                component={Chat}
+                name="GyMate ChatList"
+                component={ChatList}
+                options={{ headerShown: false}}
+            />
+
+            <Stack.Screen
+                name="GyMate ChatMessage"
+                component={ChatMessage}
                 options={{ headerShown: false}}
             />
 
