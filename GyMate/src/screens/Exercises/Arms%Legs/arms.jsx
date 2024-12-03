@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styleArms";
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, Modal, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -33,14 +34,14 @@ export default function Arms() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço1.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 1</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
                                 <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço2.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 2</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
                         </View>
 
@@ -49,14 +50,14 @@ export default function Arms() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
                                 <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço3.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 3</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
                                 <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço4.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 4</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
                         </View>
                     </ScrollView>
@@ -73,21 +74,19 @@ export default function Arms() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Rosca com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Bíceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Em pé, segure um haltere em cada mão, com as palmas voltadas para cima. 
+                                Flexione os cotovelos, levantando os pesos até a altura dos ombros, 
+                                e depois retorne lentamente à posição inicial.
                             </Text>
                         </View>
                     </View>
@@ -104,21 +103,19 @@ export default function Arms() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Mergulho no Chão com Apoio
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Tríceps, peitoral menor e ombros.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Sente-se no chão com as mãos apoiadas no banco atrás de você e os pés no chão. 
+                                Levante o corpo estendendo os braços, depois flexione os cotovelos para abaixar 
+                                o corpo próximo ao chão, sem encostar.
                             </Text>
                         </View>
                     </View>
@@ -135,21 +132,19 @@ export default function Arms() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Rosca Inversa de Punho com Barra
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Antebraços e extensores do punho.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Intruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Ajoelhado com o antebraço apoiado em um banco, segure a barra com as palmas 
+                                voltadas para baixo. Flexione os punhos para levantar a barra e abaixe 
+                                lentamente.
                             </Text>
                         </View>
                     </View>
@@ -166,21 +161,19 @@ export default function Arms() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Extensão de Dois Braços com Halteres no Banco
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Tríceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Deitado em um banco inclinado, segure um haltere com ambas as mãos acima da 
+                                cabeça. Flexione os cotovelos para abaixar o peso atrás da cabeça e depois 
+                                estenda os braços para retornar.
                             </Text>
                         </View>
                     </View>

@@ -33,14 +33,14 @@ export default function Legs() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna1.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 1</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna2.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 2</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
                         </View>
 
@@ -49,14 +49,14 @@ export default function Legs() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna3.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 3</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna4.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 4</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
                         </View>
                     </ScrollView>
@@ -73,21 +73,18 @@ export default function Legs() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Agachamento Reverência
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Quadríceps, glúteos e abdutores.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Comece em pé, leve uma perna para trás e cruzada atrás da outra, flexionando os joelhos. 
+                                Retorne à posição inicial e repita com o outro lado.
                             </Text>
                         </View>
                     </View>
@@ -104,21 +101,18 @@ export default function Legs() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Agachamento com Peso Corporal
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Quadríceps, glúteos e isquiotibiais.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Em pé com os pés na largura dos ombros, flexione os joelhos e quadris para descer, 
+                                mantendo o peso nos calcanhares. Retorne à posição inicial.
                             </Text>
                         </View>
                     </View>
@@ -135,21 +129,17 @@ export default function Legs() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Elevação de Panturrilha
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Panturrilha.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Fique em pé e levante os calcanhares, ficando na ponta dos pés. Então, abaixe lentamente.
                             </Text>
                         </View>
                     </View>
@@ -166,21 +156,18 @@ export default function Legs() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Agachamento Pistola com Apoio em Caixa
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Quadríceps, glúteos e estabilizadores do core.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Fique em pé na frente de uma caixa ou banco, estenda uma perna para frente e 
+                                agache até tocar o assento com o quadril. Retorne à posição inicial.
                             </Text>
                         </View>
                     </View>

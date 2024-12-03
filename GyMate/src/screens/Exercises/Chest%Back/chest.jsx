@@ -33,14 +33,14 @@ export default function Chest() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Peito1.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 1</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Peito2.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 2</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
                         </View>
 
@@ -49,14 +49,14 @@ export default function Chest() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Peito3.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 3</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Peito4.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 4</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
                         </View>
                     </ScrollView>
@@ -73,21 +73,18 @@ export default function Chest() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Flexão de Braço
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Peitoral, tríceps e deltoides anteriores.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Com as mãos no chão na largura dos ombros, abaixe o peito em direção ao chão 
+                                flexionando os cotovelos, depois empurre para cima.
                             </Text>
                         </View>
                     </View>
@@ -104,21 +101,18 @@ export default function Chest() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Supino com Kettlebell no Chão
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Peitoral e tríceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Deitado no chão, segure o kettlebell em ambas as mãos. Empurre-o para cima até 
+                                estender os braços, e abaixe-o lentamente.
                             </Text>
                         </View>
                     </View>
@@ -135,21 +129,18 @@ export default function Chest() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Flexão Arqueiro
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Peitoral, tríceps e deltoides anteriores.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Com os braços afastados, flexione um cotovelo enquanto mantém o outro braço estendido, 
+                                direcionando o peso para um lado. Alterne os lados.
                             </Text>
                         </View>
                     </View>
@@ -166,21 +157,17 @@ export default function Chest() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Flexão com Toque no Ombro
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Peitoral, tríceps, deltoides e core.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Após cada flexão de braço, toque um ombro com a mão oposta, mantendo o equilíbrio.
                             </Text>
                         </View>
                     </View>

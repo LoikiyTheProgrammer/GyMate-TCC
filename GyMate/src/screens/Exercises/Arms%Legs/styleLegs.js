@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     exerciseGif: {
         width: "90%",
         height: "90%",
+        borderWidth: 2,
         borderRadius: 10,
         position: "absolute",
     },
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: "5%",
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#000",
+        color: "#fff",
         textAlign: "justify",
     },
 
@@ -157,7 +158,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: "5%",
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#000",
+        color: "#fff",
         textAlign: "justify",
     },
 

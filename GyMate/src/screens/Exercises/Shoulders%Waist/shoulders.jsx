@@ -31,32 +31,32 @@ export default function Shoulder() {
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
-                                    
+                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Ombro1.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 1</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
-
+                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Ombro2.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 2</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
                         </View>
 
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
-
+                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Ombro3.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 3</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
-
+                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Ombro4.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 4</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
                         </View>
                     </ScrollView>
@@ -65,6 +65,7 @@ export default function Shoulder() {
                 <Modal transparent={true} visible={modalVisible1} onRequestClose={() => setModalVisible1(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
+                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Ombro1.gif")}/>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible1(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -72,21 +73,18 @@ export default function Shoulder() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Elevação Lateral com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Deltoides laterais.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Em pé, com os braços para baixo ao lado do corpo, levante os halteres até a altura 
+                                dos ombros, depois abaixe.
                             </Text>
                         </View>
                     </View>
@@ -95,6 +93,7 @@ export default function Shoulder() {
                 <Modal transparent={true} visible={modalVisible2} onRequestClose={() => setModalVisible2(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
+                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Ombro2.gif")}/>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible2(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -102,21 +101,17 @@ export default function Shoulder() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Desenvolvimento de Ombros com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Deltoides e tríceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Em pé, segure os halteres na altura dos ombros e empurre-os para cima até estender os braços.
                             </Text>
                         </View>
                     </View>
@@ -125,6 +120,7 @@ export default function Shoulder() {
                 <Modal transparent={true} visible={modalVisible3} onRequestClose={() => setModalVisible3(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
+                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Ombro3.gif")}/>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible3(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -132,21 +128,17 @@ export default function Shoulder() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Elevação Frontal Alternada com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Deltoides anteriores.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Levante um haltere de cada vez para a frente, até a altura dos ombros, e abaixe.
                             </Text>
                         </View>
                     </View>
@@ -155,6 +147,7 @@ export default function Shoulder() {
                 <Modal transparent={true} visible={modalVisible4} onRequestClose={() => setModalVisible4(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
+                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Ombro4.gif")}/>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible4(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -162,21 +155,18 @@ export default function Shoulder() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Remada Alta com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Deltoides, trapézio e bíceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Segure os halteres na frente do corpo e puxe-os para cima, perto do queixo, 
+                                mantendo os cotovelos elevados.
                             </Text>
                         </View>
                     </View>

@@ -33,14 +33,14 @@ export default function Back() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Costas1.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 1</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Costas2.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 2</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
                         </View>
 
@@ -49,14 +49,14 @@ export default function Back() {
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Costas3.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 3</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
                                     <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Costas4.gif")}/>
                                 </TouchableOpacity>
-                                <Text style={styles.buttonExerciseText}>título 4</Text>
+                                <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
                         </View>
                     </ScrollView>
@@ -73,21 +73,18 @@ export default function Back() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Remada com Halteres em Pegada Reversa
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Dorsais, romboides e bíceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Incline o tronco à frente, segure um haltere em cada mão com as palmas para 
+                                cima e puxe os pesos em direção ao abdômen.
                             </Text>
                         </View>
                     </View>
@@ -104,21 +101,18 @@ export default function Back() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Flexão Inversa com Cotovelos
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Dorsais, romboides e ombros posteriores.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Deitado de costas como o calcanhar no chão, apoie os cotovelos nos bancos e empurre o 
+                                tronco para cima, depois abaixe lentamente.
                             </Text>
                         </View>
                     </View>
@@ -135,21 +129,17 @@ export default function Back() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Remada com Peso Corporal em Portal
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Dorsais, romboides e bíceps.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Segure as laterais de uma porta aberta e incline-se para trás, puxando o corpo em direção à porta.
                             </Text>
                         </View>
                     </View>
@@ -166,21 +156,18 @@ export default function Back() {
 
                         <View style={styles.modalContent}>
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Remada Renegada com Halteres
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alvo: Dorsais, romboides, bíceps e core.
                             </Text>
 
                             <Text style={styles.modalTitle}>
-                                Lorem ipsum
+                                Instruções:
                             </Text>
                             <Text style={styles.modalText}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Labore ea tempore eaque, provident odit nihil numquam, 
-                                perspiciatis, consectetur soluta nobis voluptatem eligendi 
-                                consequatur mollitia itaque recusandae natus blanditiis minima. 
-                                Eligendi!
+                                Em posição de prancha, segure um haltere em cada mão e reme um deles para o lado do tronco. 
+                                Alterne os lados.
                             </Text>
                         </View>
                     </View>
