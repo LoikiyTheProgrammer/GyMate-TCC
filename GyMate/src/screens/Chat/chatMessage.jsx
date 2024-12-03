@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleChatMessage";
-import { SafeAreaView, View, Text, TextInput, TouchableOpacity, ScrollView, ActivityIndicator } from "react-native";
+import { SafeAreaView, View, Text, TextInput, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { FIREBASE_DB } from "../../firebase/firebase";
 import { collection, addDoc, query, where, getDocs, orderBy } from "firebase/firestore";

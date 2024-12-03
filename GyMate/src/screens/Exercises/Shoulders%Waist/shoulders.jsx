@@ -15,13 +15,9 @@ export default function Shoulder() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff"/>
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
@@ -29,8 +25,6 @@ export default function Shoulder() {
                     <Image style={styles.coverImage} source={require("../../../assets/imgs/Treino-Ombros.png")}/>
                     <Text style={styles.coverTitle}>Treino de Ombro</Text>
                 </View>
-
-                <View style={styles.space}/>
 
                 <View style={styles.scrollviewContainer}>
                     <ScrollView style={styles.scrollview}>

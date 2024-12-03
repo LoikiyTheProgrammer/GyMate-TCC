@@ -24,22 +24,18 @@ export default function AI() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff"/>
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
                 <View style={styles.welcomeContainer}>
-                    <Text style={styles.welcomeText}>O que você deseja exercitar?</Text>
+                    <Text style={styles.welcomeText}>Gemini AI</Text>
                 </View>
 
                 <View style={styles.responseContainer}>
-                    <ScrollView style={styles.scrollview}>
+                    <ScrollView style={styles.responseList}>
                         <Text style={styles.responseText}>{responseText}</Text>
                     </ScrollView>
                 </View>

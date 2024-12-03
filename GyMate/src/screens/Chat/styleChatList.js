@@ -9,20 +9,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    BackgroundImage: {
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-
     header: {
-        width: "90%",
-        height: "10%",
-        marginTop: height * 0.05,
+        width: "100%",
+        height: "15%",
+        paddingHorizontal: "5%",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#1179e2",
     },
 
     headerTitle: {
@@ -32,45 +27,49 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    buttonNotification: {
-        width: 50,
-        height: 50,
+    mainContainer: {
+        width: "100%",
+        height: "80%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    mainContainer: {
+    searchBarContainer: {
+        width: "90%",
+        height: "10%",
+    },
+
+    searchBar: {
+        width: "100%",
+        height: 60,
+        paddingHorizontal: 5,
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: "#1179e2",
+        fontSize: 20,
+        fontFamily: "Lexend Regular",
+        color: "#1179e2",
+        backgroundColor: "#fff",
+    },
+
+    userListContainer: {
         width: "90%",
         height: "80%",
+    },
+
+    userList: {
+        width: "100%",
+    },
+
+    userItem: {
+        width: "100%",
+        padding: 5,
+        borderBottomWidth: 2,
+        borderColor: "#1179e2",
+        display: "flex",
+        flexDirection: "row",
+        alignSelf: "center",
         alignItems: "center",
-        justifyContent: "flex-start",
-    },
-
-    searchBar: {
-        width: "100%",
-        height: 60,
-        marginBottom: 20,
-        paddingHorizontal: "5%",
-        borderWidth: 2,
-        borderRadius: 10,
-        borderColor: "#1179e2",
-        fontSize: 20,
-        fontFamily: "Lexend Regular",
-        color: "#1179e2",
-        backgroundColor: "#fff",
-    },
-
-    userList: {
-        width: "100%",
-    },
-
-    userItem: {
-        width: "100%",
-        marginBottom: 10,
-        padding: "5%",
-        borderWidth: 2,
-        borderRadius: 20,
-        borderColor: "#1179e2",
         backgroundColor: "#fff",
     },
 
@@ -81,47 +80,7 @@ const styles = StyleSheet.create({
     },
 
     userEmail: {
-        fontSize: 15,
-        fontFamily: "Lexend Regular",
-        color: "#1179e2",
-    },
-
-    searchBar: {
-        width: "100%",
-        height: 60,
-        marginBottom: 20,
-        paddingHorizontal: "5%",
-        borderWidth: 2,
-        borderRadius: 10,
-        borderColor: "#1179e2",
-        fontSize: 20,
-        fontFamily: "Lexend Regular",
-        color: "#1179e2",
-        backgroundColor: "#fff",
-    },
-
-    userList: {
-        width: "100%",
-    },
-
-    userItem: {
-        width: "100%",
-        marginBottom: 10,
-        padding: "5%",
-        borderWidth: 2,
-        borderRadius: 20,
-        borderColor: "#1179e2",
-        backgroundColor: "#fff",
-    },
-
-    userName: {
-        fontSize: 15,
-        fontFamily: "Lexend Bold",
-        color: "#1179e2",
-    },
-
-    userEmail: {
-        fontSize: 15,
+        fontSize: 10,
         fontFamily: "Lexend Regular",
         color: "#1179e2",
     },

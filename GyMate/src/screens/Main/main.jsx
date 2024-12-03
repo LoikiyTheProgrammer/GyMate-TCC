@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styleMain";
-import { SafeAreaView, View, ScrollView, Text, TouchableOpacity, Image } from "react-native";
+import { SafeAreaView, View, ScrollView, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ArmsLegs } from "../../components/Arms&Legs";
 import { ChestBack } from "../../components/Chest&Back";
@@ -13,20 +13,14 @@ export default function Main() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff"/>
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
                 <View style={styles.navContainer}>
-                    <Text style={styles.navText}>Começe seu treino agora</Text>
                     <TouchableOpacity style={styles.buttonRoutine} onPress={() => navigation.navigate("GyMate Routine")}>
-                        <Image style={styles.buttonRoutineImage} source={require("../../assets/imgs/Fundo-GyMate-90º.png")} />
                         <Text style={styles.buttonRoutineText}>Crie sua rotina</Text>
                     </TouchableOpacity>
 

@@ -8,12 +8,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    BackgroundImage: {
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-
     header: {
         width: "100%",
         height: "5%",
@@ -29,25 +23,23 @@ const styles = StyleSheet.create({
     logoContent: {
         width: "90%",
         height: "100%",
-        borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     logoTitle: {
         fontSize: 80,
         fontFamily: "Lexend Bold",
-        color: "#1179e2",
+        color: "#fff",
         textAlign: "center",
     },
 
     logoText: {
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#1179e2",
+        color: "#fff",
         textAlign: "center",
     },
 
@@ -59,9 +51,9 @@ const styles = StyleSheet.create({
     },
 
     welcomeText: {
-        fontSize: 40,
-        fontFamily: "Lexend Regular",
-        color: "#fff",
+        fontSize: 30,
+        fontFamily: "Lexend Bold",
+        color: "#1179e2",
         textAlign: "center",
     },
 
@@ -75,36 +67,32 @@ const styles = StyleSheet.create({
     buttonSignin: {
         width: "90%",
         height: 60,
-        borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     buttonSigninText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#1179e2",
+        color: "#fff",
         textAlign: "center",
     },
 
     buttonSignup: {
         width: "90%",
         height: 60,
-        borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     buttonSignupText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#1179e2",
+        color: "#fff",
         textAlign: "center",
     },
 

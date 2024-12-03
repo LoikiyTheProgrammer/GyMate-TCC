@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styleHome";
-import { SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
+import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
@@ -8,19 +8,17 @@ export default function Home() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}/>
 
             <View style={styles.logoContainer}>
                 <View style={styles.logoContent}>
                     <Text style={styles.logoTitle}>GyMate</Text>
-                    <Text style={styles.logoText}>escolha o modo de acesso</Text>
+                    <Text style={styles.logoText}>escolha seu modo de acesso</Text>
                 </View>
             </View>
 
             <View style={styles.welcomeContainer}>
-                <Text style={styles.welcomeText}>Bora treinar?</Text>
+                <Text style={styles.welcomeText}>Pronto para treinar?</Text>
             </View>
 
             <View style={styles.navContainer}>
@@ -31,10 +29,6 @@ export default function Home() {
                 <TouchableOpacity style={styles.buttonSignup} onPress={ () => navigation.navigate("GyMate Sign-up")}>
                     <Text style={styles.buttonSignupText}>Registrar-se</Text>
                 </TouchableOpacity>
-
-                {/* <TouchableOpacity onPress={ () => navigation.navigate("GyMate Main")}>
-                    <Text>Pular</Text>
-                </TouchableOpacity> */}
             </View>
 
             <View style={styles.footer}/>

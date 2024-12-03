@@ -54,19 +54,18 @@ export default function Profile() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff"/>
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
                 <View style={styles.profileContainer}>
-                    <View style={styles.profileContent}>
-                        <MaterialCommunityIcons name="account-circle" size={300} color="#000"/>
+                    <View style={styles.profileImage}>
+                        <MaterialCommunityIcons name="account-circle" size={300} color="#1179e2"/>
+                    </View>
+
+                    <View style={styles.infoContainer}>
                         <Text style={styles.profileTitle}>Nome:</Text>
                         <Text style={styles.profileText}>{fullName}</Text>
                         <Text style={styles.profileTitle}>E-mail:</Text>

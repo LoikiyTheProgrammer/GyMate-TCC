@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#1179e2",
+        backgroundColor: "#fff",
     },
 
     header: {
@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
     logoTitle: {
         fontSize: 80,
         fontFamily: "Lexend Bold",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
     logoText: {
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
@@ -52,26 +52,24 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 60,
         margin: 5,
-        paddingHorizontal: "5%",
+        paddingHorizontal: 5,
         borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#fff",
+        borderColor: "#1179e2",
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#fff",
-        backgroundColor: "#1179e2",
+        color: "#1179e2",
+        backgroundColor: "#fff",
     },
 
     buttonSignup: {
         width: "90%",
         height: 60,
         margin: 5,
-        borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     buttonSignupText: {
@@ -81,29 +79,22 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    buttonSignupImage: {
-        width: "100%",
-        height: "100%",
-        borderRadius: 18,
-        position: "absolute",
-    },
-
     buttonBack: {
         width: "45%",
         height: 60,
         margin: 5,
         borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#fff",
+        borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#1179e2",
+        backgroundColor: "#fff",
     },
 
     buttonBackText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
@@ -116,7 +107,7 @@ const styles = StyleSheet.create({
 
     navText: {
         fontSize: 25,
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
@@ -128,14 +119,14 @@ const styles = StyleSheet.create({
     buttonSigninText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
     
     footer: {
         width: "100%",
         height: "5%",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 });
 

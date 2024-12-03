@@ -15,13 +15,9 @@ export default function Waist() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff"/>
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
@@ -30,14 +26,12 @@ export default function Waist() {
                     <Text style={styles.coverTitle}>Treino de Abdômen</Text>
                 </View>
 
-                <View style={styles.space}/>
-
                 <View style={styles.scrollviewContainer}>
                     <ScrollView style={styles.scrollview}>
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
-                                    
+
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>título 1</Text>
                             </View>

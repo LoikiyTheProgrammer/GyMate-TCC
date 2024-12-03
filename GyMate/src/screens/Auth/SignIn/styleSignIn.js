@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 60,
         margin: 5,
-        paddingHorizontal: "5%",
+        paddingHorizontal: 5,
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
@@ -77,9 +77,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 60,
         margin: 5,
-        borderWidth: 2,
         borderRadius: 20,
-        borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#1179e2",
@@ -90,13 +88,6 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
-    },
-
-    buttonSigninImage: {
-        width: "100%",
-        height: "100%",
-        borderRadius: 18,
-        position: "absolute",
     },
 
     buttonBack: {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styleSignUp";
-import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH, FIREBASE_DB } from "../../../firebase/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -70,14 +70,14 @@ export default function SignUp() {
                     value={fullName}
                     onChangeText={setFullName}
                     placeholder="Digite seu nome"
-                    placeholderTextColor={"#fff"}
+                    placeholderTextColor={"#1179e2"}
                 />
                 <TextInput
                     style={styles.mainInput}
                     value={email}
                     onChangeText={setEmail}
                     placeholder="Digite seu e-mail"
-                    placeholderTextColor={"#fff"}
+                    placeholderTextColor={"#1179e2"}
                     keyboardType="email-address"
                     autoCapitalize="none"
                 />
@@ -86,7 +86,7 @@ export default function SignUp() {
                     value={password}
                     onChangeText={setPassword}
                     placeholder="Digite sua senha"
-                    placeholderTextColor={"#fff"}
+                    placeholderTextColor={"#1179e2"}
                     secureTextEntry={true}
                     autoCapitalize="none"
                 />
@@ -95,13 +95,12 @@ export default function SignUp() {
                     value={confirmPassword}
                     onChangeText={setConfirmPassword}
                     placeholder="Confirme sua senha"
-                    placeholderTextColor={"#fff"}
+                    placeholderTextColor={"#1179e2"}
                     secureTextEntry={true}
                     autoCapitalize="none"
                 />
 
                 <TouchableOpacity style={styles.buttonSignup} onPress={handleSignUp}>
-                    <Image style={styles.buttonSignupImage} source={require("../../../assets/imgs/Fundo-GyMate-90º.png")} />
                     <Text style={styles.buttonSignupText}>Criar conta</Text>
                 </TouchableOpacity>
 
@@ -117,7 +116,7 @@ export default function SignUp() {
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.footer} />
+            <View style={styles.footer}/>
         </SafeAreaView>
     );
 }

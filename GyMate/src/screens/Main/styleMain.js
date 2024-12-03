@@ -9,20 +9,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    BackgroundImage: {
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-
     header: {
-        width: "90%",
-        height: "10%",
-        marginTop: height*0.05,
+        width: "100%",
+        height: "15%",
+        paddingHorizontal: "5%",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#1179e2",
     },
 
     headerTitle: {
@@ -30,13 +25,6 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
-    },
-
-    buttonNotification: {
-        width: 50,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
     },
 
     mainContainer: {
@@ -48,29 +36,15 @@ const styles = StyleSheet.create({
 
     navContainer: {
         width: "90%",
-        height: "30%",
-        borderWidth: 2,
-        borderRadius: 10,
-        borderColor: "#1179e2",
+        height: "20%",
         alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#fff",
-    },
-
-    navText: {
-        margin: 5,
-        fontSize: 20,
-        fontFamily: "Lexend Bold",
-        color: "#1179e2",
-        textAlign: "center",
     },
 
     buttonRoutine: {
-        width: "90%",
+        width: "100%",
         height: 60,
-        margin: 5,
         borderWidth: 2,
-        borderRadius: 20,
+        borderRadius: 10,
         borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
@@ -84,35 +58,28 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    buttonRoutineImage: {
-        width: "100%",
-        height: "100%",
-        borderRadius: 18,
-        position: "absolute",
-    },
-
     buttonAI: {
-        width: "90%",
+        width: "100%",
         height: 60,
         margin: 5,
         borderWidth: 2,
-        borderRadius: 20,
+        borderRadius: 10,
         borderColor: "#1179e2",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     buttonAIText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#1179e2",
+        color: "#fff",
         textAlign: "center",
     },
 
     scrollviewContainer: {
         width: "90%",
-        height: "60%",
+        height: "70%",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -120,7 +87,7 @@ const styles = StyleSheet.create({
     scrollviewText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
-        color: "#fff",
+        color: "#1179e2",
         alignSelf: "flex-start",
     },
 

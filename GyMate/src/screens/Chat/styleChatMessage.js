@@ -10,15 +10,14 @@ const styles = StyleSheet.create({
     header: {
         width: "100%",
         height: "15%",
-        paddingHorizontal: "10%",
-        display: "flex",
+        paddingHorizontal: "5%",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#1179e2",
     },
 
     headerTitle: {
-        fontSize: 30,
+        fontSize: 40,
         fontFamily: "Lexend Bold",
         color: "#fff",
     },
@@ -67,7 +66,6 @@ const styles = StyleSheet.create({
         color: "#fff",
     },
 
-
     footer: {
         width: "100%",
         borderTopWidth: 2,
@@ -86,11 +84,11 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 20,
         borderColor: "#1179e2",
-        paddingHorizontal: 10,
+        paddingHorizontal: 5,
         fontSize: 20,
         fontFamily: "Lexend Regular",
         color: "#1179e2",
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#fff",
     },
 
     sendButton: {

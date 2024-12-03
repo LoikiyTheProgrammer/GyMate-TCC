@@ -9,20 +9,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    BackgroundImage: {
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-
     header: {
-        width: "90%",
-        height: "10%",
-        marginTop: height*0.05,
+        width: "100%",
+        height: "15%",
+        paddingHorizontal: "5%",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#1179e2",
     },
 
     headerTitle: {
@@ -30,13 +25,6 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
-    },
-
-    buttonNotification: {
-        width: 50,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
     },
 
     mainContainer: {
@@ -49,7 +37,6 @@ const styles = StyleSheet.create({
     welcomeContainer: {
         width: "90%",
         height: "10%",
-        paddingHorizontal: "5%",
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         alignItems: "center",
@@ -58,7 +45,7 @@ const styles = StyleSheet.create({
     },
 
     welcomeText: {
-        fontSize: 20,
+        fontSize: 30,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
@@ -74,12 +61,12 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    scrollview: {
-        paddingHorizontal: "5%",
+    responseList: {
+        paddingHorizontal: 5,
     },
 
     responseText: {
-        fontSize: 16,
+        fontSize: 20,
         fontFamily: "Lexend Regular",
         color: "#1179e2",
         textAlign: "justify",
@@ -97,10 +84,10 @@ const styles = StyleSheet.create({
     questionInput: {
         width: "80%",
         height: 60,
-        paddingHorizontal: "5%",
+        paddingHorizontal: 5,
         borderWidth: 2,
         borderTopLeftRadius: 10,
-        borderBottomLeftRadius: 20,
+        borderBottomLeftRadius: 10,
         borderColor: "#1179e2",
         fontSize: 20,
         fontFamily: "Lexend Regular",
@@ -112,7 +99,7 @@ const styles = StyleSheet.create({
         width: "20%",
         height: 60,
         borderTopRightRadius: 10,
-        borderBottomRightRadius: 20,
+        borderBottomRightRadius: 10,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "#1179e2",

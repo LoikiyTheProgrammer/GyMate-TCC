@@ -9,20 +9,15 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
 
-    BackgroundImage: {
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-
     header: {
-        width: "90%",
-        height: "10%",
-        marginTop: height*0.05,
+        width: "100%",
+        height: "15%",
+        paddingHorizontal: "5%",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
+        backgroundColor: "#1179e2",
     },
 
     headerTitle: {
@@ -42,13 +37,14 @@ const styles = StyleSheet.create({
     mainContainer: {
         width: "100%",
         height: "80%",
+        paddingVertical: "10%",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
     },
 
     cover: {
         width: "90%",
-        height: "39%",
+        height: "45%",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -65,11 +61,6 @@ const styles = StyleSheet.create({
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "center",
-    },
-
-    space: {
-        width: "90%",
-        height: "1%",
     },
 
     scrollviewContainer: {
@@ -93,21 +84,35 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         alignItems: "center",
         justifyContent: "flex-end",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     buttonExercise: {
         width: "100%",
         height: "85%",
         borderRadius: 20,
-        backgroundColor: "gray",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    exerciseGif: {
+        width: "90%",
+        height: "90%",
+        borderRadius: 10,
+        position: "absolute",
+    },
+
+    exerciseGif2: {
+        width: "100%",
+        height: "100%",
+        position: "absolute",
     },
 
     buttonExerciseText: {
         height: "15%",
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#000",
+        color: "#fff",
         textAlign: "center",
     },
 
@@ -129,16 +134,15 @@ const styles = StyleSheet.create({
 
     modalCover: {
         width: "100%",
-        height: "40%",
+        height: "50%",
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        backgroundColor: "gray",
     },
 
     modalContent: {
         width: "100%",
         height: "40%",
-        backgroundColor: "#fff",
+        backgroundColor: "#1179e2",
     },
 
     modalTitle: {

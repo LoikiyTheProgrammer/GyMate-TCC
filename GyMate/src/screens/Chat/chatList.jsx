@@ -52,40 +52,43 @@ export default function ChatList() {
     if (loading) {
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-                <ActivityIndicator size="large" color="#1179e2" />
+                <ActivityIndicator size="large" color="#1179e2"/>
             </View>
         );
     }
 
     return (
         <SafeAreaView style={styles.container}>
-            <Image style={styles.BackgroundImage} source={require("../../assets/imgs/Fundo-GyMate.png")}/>
-
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <TouchableOpacity style={styles.buttonNotification}>
-                    <MaterialCommunityIcons name="bell-check" size={50} color="#fff" />
-                </TouchableOpacity>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
             </View>
 
             <View style={styles.mainContainer}>
-                <TextInput
-                    style={styles.searchBar}
-                    value={searchText}
-                    onChangeText={setSearchText}
-                    placeholder="Busque o usuário"
-                    placeholderTextColor={"#1179e2"}
-                    maxLength={50}
-                />
+                <View style={styles.searchBarContainer}>
+                    <TextInput
+                        style={styles.searchBar}
+                        value={searchText}
+                        onChangeText={setSearchText}
+                        placeholder="Busque o usuário"
+                        placeholderTextColor={"#1179e2"}
+                        maxLength={50}
+                    />
+                </View>
 
-                <ScrollView contentContainerStyle={styles.userList}>
-                    {filteredUsers.map(user => (
-                        <TouchableOpacity key={user.id} style={styles.userItem} onPress={() => navigation.navigate("GyMate ChatMessage", { userId: user.id })}>
-                            <Text style={styles.userName}>{user.FullName}</Text>
-                            <Text style={styles.userEmail}>{user.Email}</Text>
-                        </TouchableOpacity>
-                    ))}
-                </ScrollView>
+                <View style={styles.userListContainer}>
+                    <ScrollView style={styles.userList}>
+                        {filteredUsers.map(user => (
+                            <TouchableOpacity key={user.id} style={styles.userItem} onPress={() => navigation.navigate("GyMate ChatMessage", { userId: user.id })}>
+                                <MaterialCommunityIcons name="account-circle" size={50} color="#1179e2"/>
+                                <View>
+                                    <Text style={styles.userName}>{user.FullName}</Text>
+                                    <Text style={styles.userEmail}>{user.Email}</Text>
+                                </View>
+                            </TouchableOpacity>
+                        ))}
+                    </ScrollView>
+                </View>
             </View>
 
             <View style={styles.footer}>

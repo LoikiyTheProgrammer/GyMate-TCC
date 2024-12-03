@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styleSignIn";
-import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH } from "../../../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -64,7 +64,6 @@ export default function SignIn() {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.buttonSignin} onPress={handleSignIn}>
-                    <Image style={styles.buttonSigninImage} source={require("../../../assets/imgs/Fundo-GyMate-90º.png")} />
                     <Text style={styles.buttonSigninText}>Entrar na conta</Text>
                 </TouchableOpacity>
 
