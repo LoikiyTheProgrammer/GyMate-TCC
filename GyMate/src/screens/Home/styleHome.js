@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
     logoContainer: {
         width: "100%",
-        height: "40%",
+        height: "20%",
         alignItems: "center",
         justifyContent: "center",
     },
@@ -23,29 +23,26 @@ const styles = StyleSheet.create({
     logoContent: {
         width: "90%",
         height: "100%",
-        borderRadius: 20,
         alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#1179e2",
     },
 
     logoTitle: {
         fontSize: 80,
         fontFamily: "Lexend Bold",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
     logoText: {
         fontSize: 20,
         fontFamily: "Lexend Regular",
-        color: "#fff",
+        color: "#1179e2",
         textAlign: "center",
     },
 
     welcomeContainer: {
         width: "100%",
-        height: "35%",
+        height: "55%",
         alignContent: "center",
         justifyContent: "center",
     },

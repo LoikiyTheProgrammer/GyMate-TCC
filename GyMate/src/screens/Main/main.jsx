@@ -29,9 +29,9 @@ export default function Main() {
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.scrollviewContainer}>
-                    <Text style={styles.scrollviewText}>Treine também em casa</Text>
-                    <ScrollView style={styles.scrollview}>
+                <View style={styles.exerciseListContainer}>
+                    <Text style={styles.exerciseListText}>Treine também em casa</Text>
+                    <ScrollView style={styles.exerciseList}>
                         <ArmsLegs/>
                         <ChestBack/>
                         <ShouldersWaist/>

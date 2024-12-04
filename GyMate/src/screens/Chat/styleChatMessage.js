@@ -11,13 +11,23 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "15%",
         paddingHorizontal: "5%",
+        display: "flex",
+        flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
         backgroundColor: "#1179e2",
     },
 
+    buttonBack: {
+        width: 50,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
     headerTitle: {
-        fontSize: 40,
+        width: "80%",
+        fontSize: 30,
         fontFamily: "Lexend Bold",
         color: "#fff",
     },

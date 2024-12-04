@@ -13,14 +13,19 @@ export default function AI() {
     const [responseText, setResponseText] = useState("");
 
     const handleSend = async () => {
+        if (!question.trim()) {
+            Alert.alert("Erro", "Por favor, digite uma pergunta antes de enviar.");
+            return;
+        }
+
         try {
             const result = await run(question);
             setResponseText(result);
         } catch (error) {
-            console.error("Fetch error:", error.message);
-            Alert.alert("Erro: Mensagem não foi enviada!");
+            console.error("Erro ao processar a mensagem:", error);
+            Alert.alert("Erro", "Houve um problema ao enviar sua pergunta. Verifique sua conexão e tente novamente.");
         }
-    };
+    };    
 
     return (
         <SafeAreaView style={styles.container}>
@@ -31,7 +36,7 @@ export default function AI() {
 
             <View style={styles.mainContainer}>
                 <View style={styles.welcomeContainer}>
-                    <Text style={styles.welcomeText}>Gemini AI</Text>
+                    <Text style={styles.welcomeText}>Gemini IA</Text>
                 </View>
 
                 <View style={styles.responseContainer}>

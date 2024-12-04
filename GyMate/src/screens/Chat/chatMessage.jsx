@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleChatMessage";
 import { SafeAreaView, View, Text, TextInput, TouchableOpacity, ScrollView, ActivityIndicator, KeyboardAvoidingView } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { FIREBASE_DB } from "../../firebase/firebase";
 import { collection, addDoc, query, where, getDocs, orderBy } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function ChatMessage() {
+    const navigation = useNavigation();
     const route = useRoute();
+
     const auth = getAuth();
 
     const { userId: receiverId } = route.params;
@@ -96,6 +98,9 @@ export default function ChatMessage() {
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>{userName}</Text>
+                <TouchableOpacity style={styles.buttonBack} onPress={() => navigation.navigate("GyMate ChatList")}>
+                    <MaterialCommunityIcons name="arrow-left-circle" size={50} color="#fff"/>
+                </TouchableOpacity>
             </View>
 
             <View style={styles.mainContainer}>
@@ -119,7 +124,7 @@ export default function ChatMessage() {
                 />
 
                 <TouchableOpacity style={styles.sendButton} onPress={sendMessage}>
-                    <MaterialCommunityIcons name="send" size={35} color="#fff" />
+                    <MaterialCommunityIcons name="send" size={35} color="#fff"/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

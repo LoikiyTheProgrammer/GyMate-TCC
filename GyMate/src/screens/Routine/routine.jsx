@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styleRoutine";
-import { Alert, SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Modal, Image } from "react-native";
-import { collection, addDoc, query, where, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { Alert, SafeAreaView, View, ScrollView, Text, TextInput, TouchableOpacity, Modal } from "react-native";
+import { doc, collection, addDoc, getDocs, deleteDoc, query, where } from "firebase/firestore";
 import { FIREBASE_AUTH, FIREBASE_DB } from "../../firebase/firebase";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
-
 
 export default function Routine() {
     const navigation = useNavigation();
@@ -21,11 +20,11 @@ export default function Routine() {
             try {
                 const user = FIREBASE_AUTH.currentUser;
                 if (!user) return;
-    
+
                 const routinesRef = collection(FIREBASE_DB, "Routines");
                 const q = query(routinesRef, where("userId", "==", user.uid));
                 const querySnapshot = await getDocs(q);
-    
+
                 const loadedRoutines = querySnapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
@@ -36,12 +35,12 @@ export default function Routine() {
                 Alert.alert("Erro: Falha ao carregar as rotinas!");
             }
         };
-    
+
         fetchRoutines();
-    }, []);    
+    }, []);
 
     const handleAddExercise = () => {
-        setExercises([...exercises, { name: "", reps: "", weight: "" }]);
+        setExercises([...exercises, { name: "", sets: "", reps: "", weight: "" }]);
     };
 
     const handleDeleteExercise = (index) => {
@@ -55,21 +54,21 @@ export default function Routine() {
                 const docRef = doc(FIREBASE_DB, "Routines", routineToDelete.id);
                 await deleteDoc(docRef);
             }
-    
+
             setRoutines(routines.filter((_, i) => i !== index));
         } catch (error) {
             console.error("Erro ao deletar rotina:", error);
         }
-    };    
+    };
 
     const handleAddRoutine = async () => {
         try {
             const user = FIREBASE_AUTH.currentUser;
             if (!user) return;
-    
+
             const newRoutine = { name: routineName, exercises, userId: user.uid };
             const docRef = await addDoc(collection(FIREBASE_DB, "Routines"), newRoutine);
-    
+
             setRoutines([...routines, { id: docRef.id, ...newRoutine }]);
             setModalVisible(false);
             setRoutineName("");
@@ -77,13 +76,13 @@ export default function Routine() {
         } catch (error) {
             console.error("Erro ao salvar rotina:", error);
         }
-    };    
+    };
 
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerTitle}>GyMate</Text>
-                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff"/>
+                <MaterialCommunityIcons name="dumbbell" size={50} color="#fff" />
             </View>
 
             <View style={styles.mainContainer}>
@@ -103,7 +102,9 @@ export default function Routine() {
                                 <Text style={styles.routineTitle}>{routine.name}</Text>
                                 {routine.exercises.map((exercise, i) => (
                                     <View key={i} style={styles.exercise}>
-                                        <Text style={styles.routineText}>{exercise.name} - {exercise.reps} reps - {exercise.weight} kg</Text>
+                                        <Text style={styles.routineText}>
+                                            {exercise.name} - {exercise.sets} séries - {exercise.reps} reps - {exercise.weight} kg
+                                        </Text>
                                     </View>
                                 ))}
                                 <TouchableOpacity style={styles.buttonDeleteroutine} onPress={() => handleDeleteRoutine(index)}>
@@ -145,11 +146,25 @@ export default function Routine() {
                                     />
                                     <TextInput
                                         style={styles.listNumberInput}
+                                        placeholder="Sr"
+                                        placeholderTextColor={"#1179e2"}
+                                        maxLength={2}
+                                        numberOfLines={1}
+                                        keyboardType="numeric"
+                                        value={exercise.sets}
+                                        onChangeText={(text) => {
+                                            const updatedExercises = [...exercises];
+                                            updatedExercises[index].sets = text;
+                                            setExercises(updatedExercises);
+                                        }}
+                                    />
+                                    <TextInput
+                                        style={styles.listNumberInput}
                                         placeholder="Rp"
                                         placeholderTextColor={"#1179e2"}
-                                        keyboardType="numeric"
-                                        maxLength={3}
+                                        maxLength={2}
                                         numberOfLines={1}
+                                        keyboardType="numeric"
                                         value={exercise.reps}
                                         onChangeText={(text) => {
                                             const updatedExercises = [...exercises];
@@ -161,9 +176,9 @@ export default function Routine() {
                                         style={styles.listNumberInput}
                                         placeholder="Kg"
                                         placeholderTextColor={"#1179e2"}
-                                        keyboardType="numeric"
                                         maxLength={3}
                                         numberOfLines={1}
+                                        keyboardType="numeric"
                                         value={exercise.weight}
                                         onChangeText={(text) => {
                                             const updatedExercises = [...exercises];

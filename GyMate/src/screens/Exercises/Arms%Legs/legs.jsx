@@ -31,14 +31,14 @@ export default function Legs() {
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
-                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna1.gif")}/>
+                                    <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Perna1-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
-                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna2.gif")}/>
+                                    <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Perna2-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
@@ -47,14 +47,14 @@ export default function Legs() {
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
-                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna3.gif")}/>
+                                    <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Perna3-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
-                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Perna4.gif")}/>
+                                    <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Perna4-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
@@ -65,7 +65,10 @@ export default function Legs() {
                 <Modal transparent={true} visible={modalVisible1} onRequestClose={() => setModalVisible1(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Perna1.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna1-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna1-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible1(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -93,7 +96,10 @@ export default function Legs() {
                 <Modal transparent={true} visible={modalVisible2} onRequestClose={() => setModalVisible2(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Perna2.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna2-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna2-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible2(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -121,7 +127,10 @@ export default function Legs() {
                 <Modal transparent={true} visible={modalVisible3} onRequestClose={() => setModalVisible3(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Perna3.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna3-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna3-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible3(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -148,7 +157,10 @@ export default function Legs() {
                 <Modal transparent={true} visible={modalVisible4} onRequestClose={() => setModalVisible4(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Perna4.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna4-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Perna4-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible4(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>

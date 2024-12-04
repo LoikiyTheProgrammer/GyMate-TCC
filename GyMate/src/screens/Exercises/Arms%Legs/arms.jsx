@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./styleArms";
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, Modal, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -32,14 +31,14 @@ export default function Arms() {
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible1(true)}>
-                                    <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço1.gif")}/>
+                                    <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Braço1-1.jpg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 1</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible2(true)}>
-                                <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço2.gif")}/>
+                                <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Braço2-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 2</Text>
                             </View>
@@ -48,14 +47,14 @@ export default function Arms() {
                         <View style={styles.exerciseContainer}>
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible3(true)}>
-                                <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço3.gif")}/>
+                                <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Braço3-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 3</Text>
                             </View>
 
                             <View style={styles.exercise}>
                                 <TouchableOpacity style={styles.buttonExercise} onPress={() => setModalVisible4(true)}>
-                                <Image style={styles.exerciseGif} source={require("../../../assets/imgs/Braço4.gif")}/>
+                                <Image style={styles.exerciseJPG} source={require("../../../assets/imgs/Braço4-1.jpeg")}/>
                                 </TouchableOpacity>
                                 <Text style={styles.buttonExerciseText}>Exercício 4</Text>
                             </View>
@@ -66,7 +65,10 @@ export default function Arms() {
                 <Modal transparent={true} visible={modalVisible1} onRequestClose={() => setModalVisible1(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Braço1.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço1-1.jpg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço1-2.jpg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible1(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -95,7 +97,10 @@ export default function Arms() {
                 <Modal transparent={true} visible={modalVisible2} onRequestClose={() => setModalVisible2(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Braço2.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço2-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço2-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible2(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -124,7 +129,10 @@ export default function Arms() {
                 <Modal transparent={true} visible={modalVisible3} onRequestClose={() => setModalVisible3(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Braço3.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço3-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço3-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible3(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>
@@ -153,7 +161,10 @@ export default function Arms() {
                 <Modal transparent={true} visible={modalVisible4} onRequestClose={() => setModalVisible4(false)}>
                     <View style={styles.modalContainer}>
                         <View style={styles.modalCover}>
-                            <Image style={styles.exerciseGif2} source={require("../../../assets/imgs/Braço4.gif")}/>
+                            <View style={styles.exerciseModal}>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço4-1.jpeg")}/>
+                                <Image style={styles.exerciseJPG2} source={require("../../../assets/imgs/Braço4-2.jpeg")}/>
+                            </View>
                             <TouchableOpacity style={styles.buttonClose} onPress={() => setModalVisible4(false)}>
                                 <MaterialCommunityIcons name="arrow-left-drop-circle-outline" size={50} color="#000"/>
                             </TouchableOpacity>

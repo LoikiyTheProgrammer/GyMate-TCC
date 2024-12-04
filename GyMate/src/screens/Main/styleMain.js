@@ -77,21 +77,21 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    scrollviewContainer: {
+    exerciseListContainer: {
         width: "90%",
         height: "70%",
         alignItems: "center",
         justifyContent: "center",
     },
 
-    scrollviewText: {
+    exerciseListText: {
         fontSize: 25,
         fontFamily: "Lexend Bold",
         color: "#1179e2",
         alignSelf: "flex-start",
     },
 
-    scrollview: {
+    exerciseList: {
         width: "100%",
     },
 

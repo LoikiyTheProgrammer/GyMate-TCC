@@ -4,7 +4,7 @@ import { Alert, SafeAreaView, View, Text, TextInput, TouchableOpacity } from "re
 import { useNavigation } from "@react-navigation/native";
 import { FIREBASE_AUTH, FIREBASE_DB } from "../../../firebase/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, collection, setDoc, getDocs, query, where } from "firebase/firestore";
 
 export default function SignUp() {
     const navigation = useNavigation();
@@ -18,40 +18,55 @@ export default function SignUp() {
 
     const handleSignUp = async () => {
         const auth = FIREBASE_AUTH;
-
-        try {
-            if (password !== confirmPassword) {
-              throw new Error("As senhas não são iguais!");
-            }
-        } catch (error) {
-            console.error("Verification error:", error.message);
-            Alert.alert("Erro: As senhas devem ser as mesmas!");
+    
+        if (password !== confirmPassword) {
+            console.error("As senhas não coincidem.");
+            Alert.alert("Erro", "As senhas não coincidem. Por favor, digite a mesma senha nos dois campos.");
             return;
         }
-
+    
         const userData = {
             fullName,
             email,
             password,
         };
-
+    
         try {
+            const usersCollection = collection(FIREBASE_DB, "Users");
+            const nameQuery = query(usersCollection, where("FullName", "==", userData.fullName));
+            const nameQuerySnapshot = await getDocs(nameQuery);
+    
+            if (!nameQuerySnapshot.empty) {
+                console.error("Nome já em uso:", userData.fullName);
+                Alert.alert("Erro", "O nome escolhido já está associado a outra conta. Por favor, use outro nome ou adicione um identificador único.");
+                return;
+            }
+    
             const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
             const user = userCredential.user;
-
+    
             await setDoc(doc(FIREBASE_DB, "Users", user.uid), {
                 FullName: userData.fullName,
                 Email: userData.email,
                 Password: userData.password,
             });
-
-            console.log("User created successfully!");
+    
+            console.log("Usuário criado com sucesso!");
             navigation.navigate("GyMate Main");
         } catch (error) {
-            console.error("Authentication error:", error.message);
-            Alert.alert("Erro: Usuário, e-mail ou senha inválidos!");
+            console.error("Erro de autenticação:", error.message);
+    
+            if (error.code === "auth/email-already-in-use") {
+                Alert.alert("Erro", "O e-mail informado já está registrado. Tente fazer login ou use outro endereço de e-mail.");
+            } else if (error.code === "auth/invalid-email") {
+                Alert.alert("Erro", "O e-mail digitado não parece ser válido. Por favor, verifique e tente novamente.");
+            } else if (error.code === "auth/weak-password") {
+                Alert.alert("Erro", "A senha fornecida é muito fraca. Certifique-se de usar pelo menos 6 caracteres, incluindo letras e números.");
+            } else {
+                Alert.alert("Erro", "Algo deu errado e não foi possível criar sua conta no momento. Por favor, tente novamente mais tarde.");
+            }
         }
-    };
+    };    
 
     return (
         <SafeAreaView style={styles.container}>

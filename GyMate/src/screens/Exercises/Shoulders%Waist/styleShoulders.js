@@ -95,17 +95,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
 
-    exerciseGif: {
+    exerciseModal: {
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "row",
+    },
+
+    exerciseJPG: {
         width: "90%",
         height: "90%",
         borderWidth: 2,
         borderRadius: 10,
-        position: "absolute",
-    },
-
-    exerciseGif2: {
-        width: "100%",
-        height: "100%",
         position: "absolute",
     },
 
@@ -127,28 +128,39 @@ const styles = StyleSheet.create({
     buttonClose: {
         width: 50,
         height: 50,
-        margin: 5,
-        borderColor: "#000",
         alignItems: "center",
         justifyContent: "center",
     },
 
     modalCover: {
         width: "100%",
-        height: "50%",
+        height: "25%",
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
     },
 
+    exerciseModal: {
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "row",
+        position: "absolute",
+    },
+
+    exerciseJPG2: {
+        width: "50%",
+        height: "100%",
+    },
+
     modalContent: {
         width: "100%",
-        height: "40%",
+        height: "45%",
         backgroundColor: "#1179e2",
     },
 
     modalTitle: {
         paddingHorizontal: "5%",
-        fontSize: 25,
+        fontSize: 22,
         fontFamily: "Lexend Bold",
         color: "#fff",
         textAlign: "justify",

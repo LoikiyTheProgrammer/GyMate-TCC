@@ -16,13 +16,16 @@ export default function SignIn() {
     const handleSignIn = async () => {
         const auth = FIREBASE_AUTH;
         setLoading(true);
+    
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            console.log("User signed in successfully!");
+            console.log("Usuário logado com sucesso!");
             navigation.navigate("GyMate Main");
         } catch (error) {
-            console.error("Authentication error:", error.message);
-            Alert.alert("Erro: Usuário ou senha inválidos!");
+            console.error("Erro de autenticação:", error.message);
+            Alert.alert(
+                "Falha no login", "Não foi possível realizar o login. Verifique se o e-mail e a senha estão corretos e tente novamente."
+            );
         } finally {
             setLoading(false);
         }

@@ -27,13 +27,6 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
 
-    buttonNotification: {
-        width: 50,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-
     mainContainer: {
         width: "100%",
         height: "80%",
@@ -170,7 +163,7 @@ const styles = StyleSheet.create({
     },
 
     listInput: {
-        width: "45%",
+        width: "35%",
         marginVertical: 5,
         paddingHorizontal: 5,
         borderWidth: 2,
@@ -183,7 +176,7 @@ const styles = StyleSheet.create({
     },
 
     listNumberInput: {
-        width: "20%",
+        width: "15%",
         marginVertical: 5,
         paddingHorizontal: 5,
         borderWidth: 2,
